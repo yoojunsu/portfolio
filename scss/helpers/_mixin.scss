@@ -1,0 +1,73 @@
+// display mixin
+@mixin display(
+    $dp: null,
+    $justify: null,
+    $align: null,
+    $areas: null,
+    $columns: null,
+    $rows: null,
+    $direction: null,
+    $wrap: null,
+    $gap: null,
+
+) {
+    display: $dp;
+    justify-content: $justify;
+    align-items: $align;
+    grid-template-areas: $areas;
+    grid-auto-columns: $columns;
+    grid-auto-rows: $rows;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+// position mixin
+@mixin position(
+    $p: absolute,
+    $t: null,
+    $l: null,
+    $b: null,
+    $r: null,
+) {
+    position: $p;
+    top: $t;
+    left: $l;
+    bottom: $b;
+    right: $r;
+}
+
+//backgroud mixin
+@mixin bgStyle(
+    $bg-img: null,
+    $bg-size: null,
+    $bg-position: null,
+    $bg-attachment: null,
+    $bg-repeat: no-repeat,
+) {
+    background-image: $bg-img;
+    background-size: $bg-size;
+    background-position: $bg-position;
+    background-attachment: $bg-attachment;
+    background-repeat: no-repeat;
+}
+
+// font style mixin
+@mixin fontStyle(
+    $size: null,
+    $weight: null,
+    $family: null,
+) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+}
+
+//text overflow clamp mixin
+@mixin textVerticalOverflow($clamp: null) {
+    display: -webkit-box;
+    -webkit-line-clamp: $clamp;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
