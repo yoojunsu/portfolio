@@ -8,3 +8,8 @@ let introAni = bodymovin.loadAnimation({
     autoplay: true,
     path: "../lottie/intro2-lottie.json",
 });
+
+const PERCENTAGE_BAR = document.getElementById("percentageBar");
+setTimeout( () => {
+    PERCENTAGE_BAR.style.width = "100%";
+},300);

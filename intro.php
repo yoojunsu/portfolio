@@ -5,15 +5,22 @@
 
             <div class="progress-wrap">
                 <div class="progress-bar">
-                    <span class="percentage-bar"></span>
+                    <span class="percentage-bar" id="percentageBar"></span>
                 </div>
                 <div class="intro-txt">
-                    <div class="percentage-txt-box">
-                        <span id="percentageTxt">0</span>
-                        <span>%</span>
+                    <div class="intro-txt-cont loading-txt-box active">
+                        <span class="loading-txt">L</span>
+                        <span class="loading-txt">O</span>
+                        <span class="loading-txt">A</span>
+                        <span class="loading-txt">D</span>
+                        <span class="loading-txt">I</span>
+                        <span class="loading-txt">N</span>
+                        <span class="loading-txt">G</span>
+                        <span class="loading-txt">.</span>
+                        <span class="loading-txt">.</span>
                     </div>
 
-                    <div class="greeting-txt-box">
+                    <div class="intro-txt-cont greeting-txt-box">
                         <span class="greeting-txt">
                             CONNECT!
                         </span>
