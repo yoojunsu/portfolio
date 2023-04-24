@@ -34,5 +34,9 @@
 
     </footer>
     <!----- ...footer ----->
+
+    <!-- js -->
+    <script src="./src/js/intro.js"></script>
+    <!-- ...js -->
 </body>
 </html>
