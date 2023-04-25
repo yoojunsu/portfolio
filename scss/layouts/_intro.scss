@@ -8,11 +8,34 @@
     background: $intro-bg;
     width: 100%;
     height: 100%;
+    transition: all $transition-intro-timer;
+    transition-delay: 0.6s;
 
     &-inner {
         max-width: 720px;
         height: 100%;
         margin: 0 auto;
+    }
+
+    &::after {
+        content: "";
+        background: #000;    
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleY(0);
+        transition: all $transition-intro-timer;
+    }
+
+    &.close {
+        transform: scaleY(0);
+        opacity: 0;
+
+        &::after {
+            transform: scaleY(1);
+        }
     }
 }
 
@@ -52,7 +75,7 @@
         width: 0;
         height: 100%;
         background: #eaeaea;
-        transition: width 5s;
+        transition: width 3s;
     }
 }
 
@@ -64,53 +87,68 @@
     &-cont {
         @include position();
         width: 100%;
-        opacity: 0;
-        transition: all 0.3s;
-
-        &.active {
-            opacity: 1 !important;
-            transform: none !important;
-        }
     }
 
     .loading-txt-box {
-        transform: translateX(-50%);
 
         .loading-txt {
-            display: inline-block;
             position: relative;
             animation: bouncing 0.8s infinite alternate;
-        }
+            opacity: 0;
+            transition: opacity 0.3s;
 
-        @for $i from 1 to 10 {
-            .loading-txt:nth-child(#{$i}) {
-                animation-delay: #{'.'+$i}s;
+            @for $i from 1 to 10 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{'.'+$i}s;
+                    transition-delay: #{'.'+$i}s;
+                }
+            }
+
+            &.active {
+                opacity: 1;
             }
         }
     }
 
-    .greeting-txt-box {
-        transform: translateX(50%);
+    .connect-txt-box {
+        
+        .connect-txt {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all $transition-intro-timer;
+            @for $i from 1 to 9 {
+                &:nth-child(#{$i}) {
+                    transition-delay: #{'.'+$i}s;
+                }
+            }
+
+            &.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
 
     span {
+        display: inline-block;
         color: $white;
         @include fontStyle(
             $size: 1.6rem,
             $weight: $font-midium,
             $family: $font-anton,
-        )
+        );
+        letter-spacing: 0.07em;
     }
 }
 
 /* intro animation keyframe */
 @keyframes bouncing {
     0% {
-        transform: translateY(0);
+        transform: translateX(0) translateY(0);
     }
 
     100% {
-        transform: translateY(-15px);
+        transform: translateX(0) translateY(-15px);
     }
 }
 /*** ...intro css ***/

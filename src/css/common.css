@@ -19,27 +19,38 @@ html {
   background: radial-gradient(circle at 50% 50%, rgb(24, 79, 179), rgb(0, 0, 0) 50% 50%);
   width: 100%;
   height: 100%;
+  transition: all 0.5s;
+  transition-delay: 0.6s;
 }
 .intro-box-inner {
   max-width: 720px;
   height: 100%;
   margin: 0 auto;
 }
+.intro-box::after {
+  content: "";
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transition: all 0.5s;
+}
+.intro-box.close {
+  transform: scaleY(0);
+  opacity: 0;
+}
+.intro-box.close::after {
+  transform: scaleY(1);
+}
 
 .intro-content-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 }
@@ -68,8 +79,7 @@ html {
   width: 0;
   height: 100%;
   background: #eaeaea;
-  -webkit-transition: width 5s;
-  transition: width 5s;
+  transition: width 3s;
 }
 
 .intro-txt {
@@ -80,91 +90,101 @@ html {
 .intro-txt-cont {
   position: absolute;
   width: 100%;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.intro-txt-cont.active {
-  opacity: 1 !important;
-  -webkit-transform: none !important;
-          transform: none !important;
-}
-.intro-txt .loading-txt-box {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 .intro-txt .loading-txt-box .loading-txt {
-  display: inline-block;
   position: relative;
-  -webkit-animation: bouncing 0.8s infinite alternate;
-          animation: bouncing 0.8s infinite alternate;
+  animation: bouncing 0.8s infinite alternate;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(1) {
-  -webkit-animation-delay: .1s;
-          animation-delay: .1s;
+  animation-delay: .1s;
+  transition-delay: .1s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(2) {
-  -webkit-animation-delay: .2s;
-          animation-delay: .2s;
+  animation-delay: .2s;
+  transition-delay: .2s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(3) {
-  -webkit-animation-delay: .3s;
-          animation-delay: .3s;
+  animation-delay: .3s;
+  transition-delay: .3s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(4) {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
+  animation-delay: .4s;
+  transition-delay: .4s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(5) {
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
+  animation-delay: .5s;
+  transition-delay: .5s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(6) {
-  -webkit-animation-delay: .6s;
-          animation-delay: .6s;
+  animation-delay: .6s;
+  transition-delay: .6s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(7) {
-  -webkit-animation-delay: .7s;
-          animation-delay: .7s;
+  animation-delay: .7s;
+  transition-delay: .7s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(8) {
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
+  animation-delay: .8s;
+  transition-delay: .8s;
 }
 .intro-txt .loading-txt-box .loading-txt:nth-child(9) {
-  -webkit-animation-delay: .9s;
-          animation-delay: .9s;
+  animation-delay: .9s;
+  transition-delay: .9s;
 }
-.intro-txt .greeting-txt-box {
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+.intro-txt .loading-txt-box .loading-txt.active {
+  opacity: 1;
+}
+.intro-txt .connect-txt-box .connect-txt {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s;
+}
+.intro-txt .connect-txt-box .connect-txt:nth-child(1) {
+  transition-delay: .1s;
+}
+.intro-txt .connect-txt-box .connect-txt:nth-child(2) {
+  transition-delay: .2s;
+}
+.intro-txt .connect-txt-box .connect-txt:nth-child(3) {
+  transition-delay: .3s;
+}
+.intro-txt .connect-txt-box .connect-txt:nth-child(4) {
+  transition-delay: .4s;
+}
+.intro-txt .connect-txt-box .connect-txt:nth-child(5) {
+  transition-delay: .5s;
+}
+.intro-txt .connect-txt-box .connect-txt:nth-child(6) {
+  transition-delay: .6s;
+}
+.intro-txt .connect-txt-box .connect-txt:nth-child(7) {
+  transition-delay: .7s;
+}
+.intro-txt .connect-txt-box .connect-txt:nth-child(8) {
+  transition-delay: .8s;
+}
+.intro-txt .connect-txt-box .connect-txt.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .intro-txt span {
+  display: inline-block;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 500;
   font-family: "Anton", sans-serif;
+  letter-spacing: 0.07em;
 }
 
 /* intro animation keyframe */
-@-webkit-keyframes bouncing {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
-  }
-}
 @keyframes bouncing {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateX(0) translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    transform: translateX(0) translateY(-15px);
   }
 }
 /*** ...intro css ***/
