@@ -1,7 +1,8 @@
 $black: #000;
 $white: #fff;
-$intro-bg: radial-gradient(circle at 50% 50%, rgb(24, 79, 179), rgb(0, 0, 0) 50% 50%);
-$sub-gradient: linear-gradient(150deg, rgb(0, 255, 178), rgb(100, 23, 245));
+$intro-bg: radial-gradient(circle at 50% 50%, rgb(66, 66, 66), rgb(0, 0, 0) 50% 50%);
+$main-bg-color: radial-gradient(circle at 50% 10%, rgb(24, 79, 179), rgb(0, 0, 0));
+$sub-gradient-bg: linear-gradient(150deg, rgb(0, 255, 178), rgb(100, 23, 245));
 $font-noto: 'Noto Sans KR', sans-serif;
 $font-anton: 'Anton', sans-serif;
 $font-bold: 600;
