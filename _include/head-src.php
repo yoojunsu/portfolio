@@ -9,5 +9,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
 <!-- css -->
 <link rel="stylesheet" href="/src/css/common.css" />
-<!-- js -->
-<script src="./src/js/common.js"></script>

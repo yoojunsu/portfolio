@@ -5,7 +5,7 @@ let introAni = bodymovin.loadAnimation({
     animType: 'svg',
     loop: false,
     autoplay: true,
-    path: "../lottie/intro2-lottie.json",
+    path: "../lottie/intro-new-lottie.json",
 });
 
 //intro percentage animations
