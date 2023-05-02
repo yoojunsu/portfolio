@@ -39,6 +39,15 @@ setTimeout( () => {
     if(INTRO.classList.contains("close") === true) {
         setTimeout( () => {
             INTRO.remove();
+
+            //typing 실행
+            typing("#typing",`CONNECT YJS PORTFOLIO :)`);
+
+            setTimeout( () => {
+                //키워드 fade 실행
+                document.querySelector(".pofol-keyword:first-child").classList.add(ACTIVE_CLASS);
+                setInterval(keywordFade,2000);
+            },2500);
         },1000);
     }
 },6000);
