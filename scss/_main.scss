@@ -86,37 +86,13 @@
     }
 }
 
-/** animation keyframes **/
-@keyframes mainGradient {
-    0% {
-        background-position: 0% 50%
+
+
     }
 
-    50% {
-        background-position: 100% 50%;
     }
 
-    100% {
-        background-position: 0% 50%;
     }
 }
 
-@keyframes titleLight {
-    0% {
-        text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
-    }
 
-    100% {
-        text-shadow: 0 0 11px rgba(255, 255, 255, 0.6);
-    }
-}
-
-@keyframes typingCursor {
-    0% {
-        background-color: $white;
-    }
-
-    100% {
-        background-color: $black;
-    }
-}

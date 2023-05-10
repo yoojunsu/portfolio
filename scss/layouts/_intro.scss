@@ -132,7 +132,6 @@
 
     span {
         display: inline-block;
-        color: $white;
         @include fontStyle(
             $size: 1.6rem,
             $weight: $font-midium,
@@ -140,16 +139,3 @@
         );
         letter-spacing: 0.07em;
     }
-}
-
-/* intro animation keyframe */
-@keyframes bouncing {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-
-    100% {
-        transform: translateX(0) translateY(-15px);
-    }
-}
-/*** ...intro css ***/

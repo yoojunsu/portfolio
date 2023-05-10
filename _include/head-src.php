@@ -1,7 +1,5 @@
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- font & icon -->
-<script src="https://kit.fontawesome.com/17c842da48.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/def4bdd2e0.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <!-- library -->
