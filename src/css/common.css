@@ -331,6 +331,207 @@ html {
 }
 
 /** animation keyframes **/
+/** about section css **/
+.about-section {
+  padding: 120px 0;
+}
+.about-section .about-top-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 75px;
+  margin-bottom: 70px;
+}
+.about-section .about-img-box {
+  border: 1px solid #ce0000;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 25%;
+  text-align: center;
+}
+.about-section .about-greeting-box .about-greeting-tit {
+  font-size: 4.5rem;
+  margin-bottom: 15px;
+}
+.about-section .about-greeting-box .about-greeting-txt {
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+.about-section .about-my-box {
+  display: grid;
+  grid-template-areas: ". .";
+  grid-auto-columns: 1fr;
+  gap: 35px;
+}
+.about-section .about-my {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ce0000;
+  padding: 75px 50px;
+  overflow: hidden;
+}
+.about-section .about-my:last-child {
+  grid-area: 2/3/2/1;
+}
+.about-section .about-my-top {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.about-section .about-my-icon {
+  position: relative;
+  max-width: 120px;
+  margin: 0 auto 15px;
+}
+.about-section .about-my-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ce0000;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  z-index: -1;
+}
+.about-section .about-my-icon i {
+  font-size: 3rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(140deg, #a80000 33%, #ff0000 70%);
+  padding: 30px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+}
+.about-section .about-my-tit {
+  font-size: 2rem;
+  letter-spacing: 0.3em;
+}
+.about-section .about-my-desc {
+  font-size: 1.6rem;
+  word-break: keep-all;
+}
+.about-section .about-my-desc.about-profile-subject {
+  font-weight: 500;
+  font-family: "Anton", sans-serif;
+}
+.about-section .about-my-profile-list, .about-section .about-my-career-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.about-section .about-my-profile-list {
+  gap: 15px 0;
+}
+.about-section .about-my-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 5px;
+}
+.about-section .about-my-profile i {
+  font-size: 1.5rem;
+  margin-top: 4px;
+}
+.about-section .about-my-career-list {
+  gap: 30px 0;
+}
+.about-section .about-my-career {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 7px;
+}
+.about-section .about-my-career::before {
+  content: "-";
+  color: #fff;
+  font-size: 1.4rem;
+}
+.about-section .about-my-career-name {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.about-section .about-my-skil-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px 25px;
+  padding: 30px 0;
+  margin-bottom: 25px;
+  overflow: auto;
+}
+.about-section .about-my-skil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #ce0000;
+  border-radius: 50%;
+  width: 105px;
+  height: 105px;
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.about-section .about-my-skil.active {
+  background: radial-gradient(circle at 50%, #ff0000, rgb(0, 0, 0));
+  border: 5px solid #ce0000;
+}
+.about-section .about-my-skil i {
+  font-size: 3rem;
+}
+.about-section .about-my-skil-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Anton", sans-serif;
+}
+.about-section .about-my-skil-detail-box {
+  border: 3px solid #ce0000;
+  padding: 8px 20px 25px;
+}
+.about-section .about-my-skil-detail-name {
+  border-bottom: 5px solid #ce0000;
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 0;
+  padding-bottom: 5px;
+  padding-right: 25px;
+  margin-bottom: 25px;
+}
+.about-section .about-my-skil-detail-desc {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/** ...about section css **/
 @-webkit-keyframes mainGradient {
   0% {
     background-position: 0% 50%;

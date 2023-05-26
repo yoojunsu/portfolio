@@ -87,12 +87,247 @@
 }
 
 
+/** about section css **/
+.about-section {
+    padding: 120px 0;
 
+    .about-top-wrap {
+        @include display(
+            $dp: flex,
+            $align: center,
+            $justify: center,
+            $gap: 0 75px,
+        );
+        margin-bottom: 70px;
     }
 
+    // about 이미지 박스 영역 css
+    .about-img-box {
+        border: 1px solid $main-red-color;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        width: 25%;
+        text-align: center;
+    }
+    // ...about 이미지 박스 영역 css
+
+    // about 인사말 css
+    .about-greeting-box {
+
+        .about-greeting-tit {
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+        }
+
+        .about-greeting-txt {
+            font-size: 2rem;
+            letter-spacing: -0.05em;
+        }
+    }
+    // ...about 인사말 css
+
+    // about 메인 컨텐츠 css
+
+    .about-my-box {
+        @include display(
+            $dp: grid,
+            $areas: ". .",
+            $columns: 1fr,
+            $gap: 35px,
+        );
     }
 
+    .about-my {
+        background: $rgbaBlack-05;
+        border: 1px solid $main-red-color;
+        padding: 75px 50px;
+        overflow: hidden;
+
+        &:last-child {
+            grid-area: 2 / 3 / 2 / 1;
+        }
+
+        &-top {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        &-icon {
+            position: relative;
+            max-width: 120px; 
+            margin: 0 auto 15px;
+
+            &::before {
+                content: "";
+                @include position($t: 0, $l: 0);
+                width: 100%;
+                height: 100%;
+                background: $main-red-color;
+                filter: blur(10px);
+                z-index: -1;
+            }
+
+            i {
+                @include fontStyle($size: 3rem);
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(140deg, #a80000 33%, #ff0000 70%);
+                padding: 30px 15px;
+                box-sizing: border-box;
+                border-radius: 20px;
+            }
+        }
+
+        &-tit {
+            @include fontStyle(
+                $size: 2rem,
+            );
+            letter-spacing: 0.3em;
+        }
+
+        &-desc {
+            @include fontStyle($size: 1.6rem);
+            word-break: keep-all;
+
+            &.about-profile-subject {
+                @include fontStyle(
+                    $family: $font-anton,
+                    $weight: $font-midium
+                );
+            }
+        }
+
+        &-profile-list,
+        &-career-list {
+            @include display(
+                $dp: flex,
+                $direction: column
+            );
+        }
+
+        // about profile 컨텐츠
+        &-profile-list {
+            @include display($gap: 15px 0);
+        }
+
+        &-profile {
+            @include display(
+                $dp: flex,
+                $gap: 0 5px,
+            );
+
+            i {
+                @include fontStyle($size: 1.5rem);
+                margin-top: 4px;
+            }
+        }
+         //...about profile 컨텐츠
+
+        // about career 컨텐츠 
+        &-career-list {
+            @include display($gap: 30px 0);
+        }
+
+        &-career {
+            @include display(
+                $dp: flex,
+                $gap: 0 7px
+            );
+            
+            &::before {
+                content: "-";
+                color: $white;
+                @include fontStyle($size: 1.4rem);
+            }
+        }
+
+        &-career-name {
+            @include fontStyle($size: 1.8rem);
+            margin-bottom: 10px;
+        }
+        // ...about career 컨텐츠
+
+        // about skills  컨텐츠 
+
+        &-skil-wrap {
+            @include display(
+                $dp: flex,
+                $gap: 50px 25px,
+            );
+            padding: 30px 0;
+            margin-bottom: 25px;
+            overflow: auto;
+        }
+
+        &-skil-btn {
+            @include display(
+                $dp: flex,
+                $align: center,
+                $justify: center,
+                $direction: column,
+                $gap: 7px 0,
+            );
+            box-sizing: border-box;
+            border: 2px solid $main-red-color;
+            border-radius: 50%;
+            width: 105px;
+            height: 105px;
+            margin: 0 auto;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s;
+
+            &.active {
+                background: radial-gradient(circle at 50%, #ff0000, rgb(0, 0, 0));
+                border: 5px solid $main-red-color;
+            }
+
+            i {
+                @include fontStyle($size: 3rem);
+            }
+        }
+
+        &-skil-name {
+            @include fontStyle(
+                $size: 1.2rem,
+                $family: $font-anton,
+                $weight: $font-regular,
+            );
+        }
+
+        &-skil-detail-box {
+            border: 3px solid $main-red-color;
+            padding: 8px 20px 25px;
+        }
+
+        &-skil-detail-name {
+            border-bottom: 5px solid $main-red-color;
+            @include display(
+                $dp: inline-block
+            );
+            @include fontStyle(
+                $size: 4rem,
+                $family: $font-anton,
+                $weight: $font-midium,
+            );
+            letter-spacing: 0;
+            padding-bottom: 5px;
+            padding-right: 25px;
+            margin-bottom: 25px;
+        }
+
+        &-skil-detail-desc {
+            @include fontStyle(
+                $size: 1.8rem,
+            );
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+        // ...about skills  컨텐츠
+
     }
+    // ...about 메인 컨텐츠 css
 }
-
+/** ...about section css **/
 
