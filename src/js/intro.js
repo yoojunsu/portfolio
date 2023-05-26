@@ -9,12 +9,15 @@ let introAni = bodymovin.loadAnimation({
 });
 
 //intro percentage animations
+const HTML_ = document.querySelector("html,body");
 const INTRO = document.querySelector(".intro-box");
 const PERCENTAGE_BAR = document.getElementById("percentageBar");
 const LOADING_TXT_BOX = document.querySelector(".loading-txt-box");
 const LOADING_TXT_EL = document.querySelectorAll(".loading-txt");
 const CONNECT_TXT_EL = document.querySelectorAll(".connect-txt");
-const ACTIVE_CLASS = "active";
+
+/**common.js 전역변수 activeClass  재정의  */
+activeClass = "active";
 
 setTimeout( () => {
     PERCENTAGE_BAR.style.width = "100%";
@@ -22,13 +25,13 @@ setTimeout( () => {
 
 setTimeout ( () => {
     LOADING_TXT_EL.forEach( (loadingTxts) => {
-        loadingTxts.classList.remove(ACTIVE_CLASS);
+        loadingTxts.classList.remove(activeClass);
     });
 
     setTimeout( () => {
         CONNECT_TXT_EL.forEach( (connectTxts) => {
             LOADING_TXT_BOX.remove();
-            connectTxts.classList.add(ACTIVE_CLASS);
+            connectTxts.classList.add(activeClass);
         });
     },1000);
 },3000);
@@ -39,13 +42,14 @@ setTimeout( () => {
     if(INTRO.classList.contains("close") === true) {
         setTimeout( () => {
             INTRO.remove();
-
+            HTML_.style.overflowY = "auto";
             //typing 실행
-            typing("#typing",`CONNECT YJS PORTFOLIO :)`);
+            let typingTextNewLine = `CONNECT PORTFOLIO :)`;
+            typing("#typing",typingTextNewLine);
 
             setTimeout( () => {
                 //키워드 fade 실행
-                document.querySelector(".pofol-keyword:first-child").classList.add(ACTIVE_CLASS);
+                document.querySelector(".pofol-keyword:first-child").classList.add(activeClass);
                 setInterval(keywordFade,2000);
             },2500);
         },1000);
