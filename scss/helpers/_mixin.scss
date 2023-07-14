@@ -43,13 +43,15 @@
     $bg-size: null,
     $bg-position: null,
     $bg-attachment: null,
-    $bg-repeat: no-repeat,
+    $bg-repeat: null,
+    $bg-color: null
 ) {
     background-image: $bg-img;
     background-size: $bg-size;
     background-position: $bg-position;
     background-attachment: $bg-attachment;
-    background-repeat: no-repeat;
+    background-repeat: $bg-repeat;
+    background-color: $bg-color;
 }
 
 // font style mixin
@@ -63,6 +65,28 @@
     font-family: $family;
 }
 
+// scrollbar custom
+@mixin scrBarCustom(
+    $trackColor: null,
+    $thumbColor: null,
+    $scrWidth: null
+) {
+    &::-webkit-scrollbar {
+        display: block;
+        width: $scrWidth
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $trackColor;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $thumbColor;
+        border-radius: $scrWidth; 
+        height: 10%;
+    }
+}
+
 //text overflow clamp mixin
 @mixin textVerticalOverflow($clamp: null) {
     display: -webkit-box;
@@ -70,4 +94,26 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@mixin btnElHoverAction() {
+
+    &::after {
+        content: "";
+        background: $content-main-color;
+        @include position(
+            $t: 0,
+            $l: 0,
+        );
+        width: 0;
+        height: 100%;
+        transition: width 0.3s;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: $black;
+        font-weight: $font-bold;
+        &::after {width: 100%;}
+    }
 }

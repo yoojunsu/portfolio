@@ -1,4 +1,4 @@
-@import "./helpers/var","./helpers/mixin","./helpers/reset";
+@import "./helpers/var","./helpers/mixin","./helpers/reset","./helpers/fonts";
 
 // intro scss
 @import "./layouts/intro";
@@ -11,3 +11,6 @@
 
 // footer scss
 @import "./layouts/footer";
+
+// keyfraems animation scss
+@import "./helpers/animations";

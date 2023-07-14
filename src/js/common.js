@@ -1,5 +1,76 @@
 window.addEventListener("DOMContentLoaded", () => {
     
+    //최상단 메인 particles
+    particlesJS("particleVisual", {
+        particles: {
+            number: {
+                value:190, density: {
+                    enable:true, 
+                    value_area: 2998.7610382026364,
+                }
+            }
+            , color: {
+                value: "#cccccc",
+            }
+            , shape: {
+                type:"circle", 
+                stroke: {
+                    width: 2, 
+                    color: "#fff",
+                }
+            }
+            , opacity: {
+                value:0.2, random:false, anim: {
+                    enable:false, speed:1, opacity_min:0.1, sync: false,
+                }
+            }
+            , size: {
+                value:3, random:true, anim: {
+                    enable:false, speed:40, size_min:0.1, sync: false,
+                }
+            }
+            , line_linked: {
+                enable:true, distance:200, color:"#cccccc", opacity:0.5, width: 1,
+            }
+            , move: {
+                enable:true, speed:6, direction:"top-right", random:false, straight:false, out_mode:"out", bounce:false, attract: {
+                    enable:true, rotateX:600, rotateY: 1200,
+                }
+            }
+        }
+        , interactivity: {
+            detect_on:"canvas", events: {
+                onhover: {
+                    enable:true, mode: "repulse",
+                }
+                , onclick: {
+                    enable:true, mode: "push",
+                }
+                , resize: true,
+            }
+            , modes: {
+                grab: {
+                    distance:400, line_linked: {
+                        opacity: 1,
+                    }
+                }
+                , bubble: {
+                    distance:400, size:56.84540486109416, duration:2, opacity:8, speed: 3,
+                }
+                , repulse: {
+                    distance:200, duration: 0.4,
+                }
+                , push: {
+                    particles_nb: 4,
+                }
+                , remove: {
+                    particles_nb: 2,
+                }
+            }
+        }, 
+        retina_detect:true
+    });
+    
     //about skill 탭컨텐츠 실행
     const SKILLS_DETAIL = [
         {
@@ -41,11 +112,11 @@ window.addEventListener("DOMContentLoaded", () => {
             "description": `협업하는데 있어 Git의 기본 사용법을 이해하고, 
             branch의 구조등을 논의하여 협업관리자와 함께 코드 관리를 간편하게 하며, 
             컨플릭트가 일어났을 때 대처 할 수 있습니다. Git을 사용하여 팀원들과 업무 방식, 커밋 방식등의 개선점을 제안하며
-            효율적인 업무방식을 발전시키기위해 노력합니다.`
+            효율적인 업무방식을 발전시키기위해 노력합니다. 또한, Git GUI툴인 소스트리(SourceTree)를 사용하여 보다 쉬운 난이도로 협업합니다.`
         }
 
     ];
-    const SKILLS_BTNS = document.querySelectorAll(".about-my-skil");
+    const SKILLS_BTNS = document.querySelectorAll(".about-my-skil-btn");
     const SKILL_DETAIL_NAME_EL = document.querySelector(".about-my-skil-detail-name");
     const SKILL_DETAIL_DESC_EL = document.querySelector(".about-my-skil-detail-desc");
     
@@ -73,22 +144,26 @@ let typing = (typingEl, typingText) => {
     let i = 0;
     const TYPING_El = document.querySelector(typingEl);
     const TYPING_TEXT = typingText;
-
+    
     let typingActive = () => {
         if(i < TYPING_TEXT.length) {
             let typingContent = TYPING_TEXT.charAt(i);
             TYPING_El.innerHTML += typingContent;
-            i++;
+            i++;    
         }
     }
 
     setInterval(typingActive,100);
 }
 
+/**
+ * 메인 키워드 페이드 인앤아웃 효과 함수
+ */
+
 let keywordFade = () => {
-    const ACTIVE_CLASS = "active";
-    let currentTarget = document.querySelector(`.pofol-keyword.${ACTIVE_CLASS}`);
-    currentTarget.classList.remove(ACTIVE_CLASS);
+    activeClass = "active"
+    let currentTarget = document.querySelector(`.pofol-keyword.${activeClass}`);
+    currentTarget.classList.remove(activeClass);
     
     let nextTarget = currentTarget.nextElementSibling;
 
@@ -96,5 +171,27 @@ let keywordFade = () => {
         nextTarget = document.querySelector(".pofol-keyword:first-child");
     }
 
-    nextTarget.classList.add(ACTIVE_CLASS); 
+    nextTarget.classList.add(activeClass); 
+}
+
+
+/**
+ * 
+ * @param {nodeList 형태의 탭버튼 DOM요소} tabs 
+ * @param {nodeList 형태의 탭 컨텐츠 요소} contents 
+ */
+let tabAndContActive = (tabs,contents) => {
+    activeClass = "active";
+    for(let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener("click", () => {
+
+            tabs.forEach( (tab,idx) => {
+                tab.classList.remove(activeClass);
+                contents[idx].classList.remove(activeClass);
+            });
+
+            tabs[i].classList.add(activeClass);
+            contents[i].classList.add(activeClass);
+        });
+    }
 }

@@ -1,0 +1,65 @@
+/** animations class **/
+.bg-ani {
+    animation: lineAni 3s infinite alternate;
+}
+
+.fade-ani {
+    animation: fade 1s infinite alternate;
+}
+
+/** ...animations class **/
+
+
+/** intro animation keyframes **/
+@keyframes bouncing {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    100% {
+        transform: translateX(0) translateY(-15px);
+    }
+}
+/** ...intro animation keyframes **/
+
+@keyframes titleLight {
+    0% {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    }
+
+    100% {
+        text-shadow: 0 0 11px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes typingCursor {
+    0% {
+        background-color: $white;
+    }
+
+    100% {
+        background-color: $black;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scrollball {
+    0% {
+        top: 17%;
+    }
+
+    100% {
+        top: 82%;
+        opacity: 0;
+    }
+}
+/** ...main animation keyframes **/
