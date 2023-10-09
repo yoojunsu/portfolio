@@ -65,6 +65,12 @@
     font-family: $family;
 }
 
+// content bg 
+@mixin contentBg() {
+    background-color: $rgbaBlack-05;
+    backdrop-filter: blur(3px);
+}
+
 // scrollbar custom
 @mixin scrBarCustom(
     $trackColor: null,
@@ -108,12 +114,14 @@
         width: 0;
         height: 100%;
         transition: width 0.3s;
-        z-index: -1;
     }
 
     &:hover {
-        color: $black;
-        font-weight: $font-bold;
         &::after {width: 100%;}
+
+        span {
+            color: $black;
+            font-weight: $font-bold;
+        }
     }
 }
