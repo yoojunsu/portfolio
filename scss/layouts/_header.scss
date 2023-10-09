@@ -1,0 +1,104 @@
+header {
+    box-sizing: border-box;
+    @include contentBg();
+    @include position(
+        $p: fixed,
+        $t: 0,
+        $l: 0,
+        );
+    width: 100%;
+    padding: 25px;
+    z-index: 99;
+}
+
+.header-inner {
+    @include display(
+        $dp: flex,
+        $align: center,
+        $justify: space-between,
+    );
+    max-width: 1270px;
+    margin: 0 auto;
+
+    .logo {
+        @include fontStyle(
+            $family: 'Yellowtail',
+            $size: 1.7rem,
+        );
+    }
+}
+
+.nav-wrap {
+    .nav-open-btn-wrap {
+        display: none;
+        position: relative;
+        z-index: 1002;
+
+        #navOpenBtn {
+            width: 30px;
+            height: 20px;
+            margin-left: auto;
+            position: relative;
+        }
+    
+        .nav-btn-el {
+            background-color: $white;
+            width: 100%;
+            height: 2px;
+            transition: all 0.5s;
+            @include position();
+            left: 0;
+
+            &:nth-child(1) {top: 0;}
+            &:nth-child(2) {top: 50%;}
+            &:nth-child(3) {top: 100%;}
+        }
+    }
+
+    .nav-list {
+        @include display(
+            $dp: flex,
+            $gap: 25px,
+        );
+    
+        .menu {
+            position: relative;
+    
+            &::after {
+                content: "";
+                @include bgStyle(
+                    $bg-color: $content-main-color,
+                );
+                width: 0;
+                height: 1px;
+                @include position(
+                    $l: 50%,
+                    $b: -10px,
+                );
+                transform: translateX(-50%);
+                transition: width 0.2s;
+            }
+    
+            &:hover::after {
+                width: 100%;
+            }
+
+            &.current::after {
+                width: 100%;
+            }
+        }
+    
+        span,b {
+            @include fontStyle(
+                $size: 1.4rem,
+            );
+        }
+    
+        .menu-name {
+            @include fontStyle(
+                $family: $font-anton,
+            );
+            letter-spacing: 0.15em;
+        }
+    }
+}

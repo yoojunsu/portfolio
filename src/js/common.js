@@ -37,6 +37,21 @@ window.addEventListener("DOMContentLoaded", () => {
                     enable:true, rotateX:600, rotateY: 1200,
                 }
             }
+    //모바일 네비게이션 오픈
+    NAV_OPEN_BTN.addEventListener("click", () => {
+        activeClass = "active";
+        NAV_OPEN_BTN.classList.toggle(activeClass);
+
+        if(NAV_OPEN_BTN.classList.contains(activeClass)) {
+            NAV.style.display = "block";
+            setTimeout( () => {
+                NAV.classList.add(activeClass);
+            },100);
+        } else {
+            NAV.classList.remove(activeClass)
+            setTimeout( () => {
+                NAV.style.display = "none";
+            },300);
         }
         , interactivity: {
             detect_on:"canvas", events: {
@@ -70,6 +85,38 @@ window.addEventListener("DOMContentLoaded", () => {
         }, 
         retina_detect:true
     });
+    //nav 메뉴 클릭시 스크롤 이동 이벤트
+    const NAV_MENUS = document.querySelectorAll("nav .menu");
+    const MAIN_CONTENT_SECTION = document.querySelectorAll("main > section");
+    for(let i = 0; i < NAV_MENUS.length; i++) {
+        let currentClass = "current";
+
+        NAV_MENUS[i].addEventListener("click", (e) => {
+
+            NAV_MENUS.forEach( (navMenus) => {
+                navMenus.classList.remove(currentClass);
+            });
+
+            e.currentTarget.classList.add(currentClass);
+            window.scrollTo(0,MAIN_CONTENT_SECTION[i].offsetTop);
+        });
+
+        window.addEventListener("scroll", () => {
+            let scrY = this.scrollY + 100;
+
+            if(scrY >= MAIN_CONTENT_SECTION[i].offsetTop) {
+                if(NAV_MENUS[i].classList.contains(currentClass)) return;
+
+                NAV_MENUS.forEach( (navMenus) => {
+                    navMenus.classList.remove(currentClass);
+                });
+                
+                NAV_MENUS[i].classList.add(currentClass);
+            }
+        });
+    }
+
+    
     
     //about skill 탭컨텐츠 실행
     const SKILLS_DETAIL = [
