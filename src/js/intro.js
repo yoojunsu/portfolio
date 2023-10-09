@@ -3,9 +3,9 @@ const INTRO_ANI_BOX = document.getElementById('introAniBox');
 let introAni = bodymovin.loadAnimation({
     wrapper: INTRO_ANI_BOX,
     animType: 'svg',
-    loop: false,
+    loop: true,
     autoplay: true,
-    path: "../lottie/intro-new-lottie.json",
+    path: "../lottie/intro.json",
 });
 
 //intro percentage animations
@@ -43,12 +43,13 @@ setTimeout( () => {
         setTimeout( () => {
             INTRO.remove();
             HTML_.style.overflowY = "auto";
+            VISUAL_ANI_BOX.classList.add("on");
             //typing 실행
             let typingTextNewLine = `CONNECT PORTFOLIO :)`;
             typing("#typing",typingTextNewLine);
 
             setTimeout( () => {
-                //키워드 fade 실행
+                //Home 키워드 fade 실행
                 document.querySelector(".pofol-keyword:first-child").classList.add(activeClass);
                 setInterval(keywordFade,2000);
             },2500);
