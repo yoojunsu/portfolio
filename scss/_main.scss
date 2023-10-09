@@ -1,12 +1,7 @@
 main {
     background-color: $main-color;
-    &::after {
-        content: "";
-        // @include bgStyle(
-        //     $bg-img: $section-bg1, 
-        //     $bg-position: 100% 50%,
-        //     $bg-size: 300%,
-        // );
+
+    #particleContent {
         @include position(
             $p: fixed,
             $t: 0,
@@ -14,14 +9,25 @@ main {
         );
         width: 100%;
         height: 100%;
-        animation: sectionGradient infinite 8s;
-        z-index: -2;
+        opacity: 0.5;
     }
 }
 
 .section-tit-wrap {
+    @include display(
+        $dp: flex,
+        $align: flex-end,
+        $justify: center, 
+        $gap: 15px,
+    );
     text-align: center;
     margin-bottom: 75px;
+
+    .section-num {
+        @include fontStyle(
+            $size: 1.6rem,   
+        );
+    }
 
     .section-tit {
         @include fontStyle(
@@ -30,37 +36,56 @@ main {
             $family: $font-anton
         );
         letter-spacing: 0.3em;
+        line-height: 1;
     }
 }
 /** visual section css **/
 .visual-section {
+    background-color: $main-color;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 
-    .visual-content {
+    canvas {
         @include position(
             $t: 0,
-            $l: 0
         );
+        z-index: 2;
+    }
+
+    .visual-content {
+        box-sizing: border-box;
+        @include display(
+            $dp: flex,
+            $direction: column,
+            $justify: center,
+        ); 
         width: 100%;
         height: 100%;
-        animation: mainGradient 4s infinite;
+        padding: 0 25px;
+        position: relative;
 
-        &-txt-box {
-            @include display(
-                $dp: flex,
-                $direction: column,
-                $justify: center,
-                $align: center,
+        #visualAniWrap {
+            max-width: 190px;
+            @include position(
+                $t: 39%,
+                $l: -5%,
             );
+            transform: translate(-50%, -50%);
+            transition: left 3s;
+            
+            &.on {
+                left: 50%;
+            }
+        }
+        
+        &-txt-box {
             width: 100%;
-            height: 100%;
             text-align: center;
 
             .pofol-tit {
                 @include fontStyle(
-                    $size: 7rem,
+                    $size: 6.5rem,
                     $weight: $font-light,
                     $family: $font-anton,
                 );
@@ -72,7 +97,6 @@ main {
                     content: "";
                     @include position(
                         $b: 0,
-                        $r: -30px
                     );
                     display: inline-block;
                     width: 30px;
@@ -157,7 +181,6 @@ main {
 
     // about 이미지 박스 영역 css
     .about-img-box {
-         
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 50%;
         width: 25%;
@@ -170,12 +193,13 @@ main {
 
         .about-greeting-tit {
             font-size: 4.5rem;
-            margin-bottom: 15px;
         }
 
         .about-greeting-txt {
             font-size: 2rem;
             letter-spacing: -0.05em;
+            line-height: 1.5;
+            margin-top: 15px;
         }
     }
     // ...about 인사말 css
@@ -192,8 +216,7 @@ main {
     }
 
     .about-my {
-        background: $rgbaBlack-05;
-         
+        @include contentBg();
         padding: 75px 50px;
         overflow: hidden;
 
@@ -390,36 +413,6 @@ main {
 .work-section {
     padding: 120px 0;
 
-    .work-btn-box {
-        @include display(
-            $dp: flex,
-            $justify: center,
-            $gap: 20px,
-        );
-        max-width: 500px;
-        margin: 0 auto 50px;
-
-        .work-cate-btn {
-            border: 1px solid $content-main-color;
-            color: $text-main-color;
-            @include fontStyle(
-                $size: 2rem,
-                $family: $font-anton
-            );
-            width: 100%;
-            padding: 15px 0;
-            position: relative;
-
-            @include btnElHoverAction();
-
-            &.active {
-                &::after {
-                    width: 100%;
-                }
-            }
-        }
-    }
-
     .work-list {
         @include display(
             $dp: grid,
@@ -431,15 +424,14 @@ main {
     }
 
     .work {
-        background: $rgbaBlack-05;
+        @include contentBg();
         border-radius: 20px;
         padding: 30px 20px;
         position: relative;
         transition: all 0.3s;
 
         &:hover {
-            transform: scale(1.01);
-            box-shadow: 0 0 10px 3px $rgbaBlack-04;
+            box-shadow: 0 0 10px 3px $rgbaBlack-05;
         }
 
         &-txt {
@@ -488,14 +480,43 @@ main {
 
         &-link {
             border: 1px solid $content-main-color;
-            @include fontStyle(
-                $size: 1.5rem,
-                $weight: $font-light,
-            );
+            border-radius:  7px;
             text-align: center;
             width: 100%;
             padding: 7px 0;
             position: relative;
+            overflow: hidden;
+            
+            span {
+                @include fontStyle(
+                    $size: 1.5rem,
+                    $weight: $font-light,
+                );
+                position: relative;
+                z-index: 2;
+            }
+
+            @include btnElHoverAction();
+        }
+    }
+
+    .btn-wrap {
+        margin-top: 50px;
+        text-align: center;
+
+        #loadMoreBtn { 
+            border: 1px solid $content-main-color;
+            width: 100%;
+            max-width: 300px;
+            padding: 7px 0;
+            position: relative;
+            overflow: hidden;
+            
+            span {
+                @include fontStyle($size: 2rem);
+                position: relative;
+                z-index: 2;
+            }
 
             @include btnElHoverAction();
         }
@@ -506,27 +527,22 @@ main {
 
 /** contact section css **/
 .contact-section {
-    padding-bottom: 150px;
-
-    .section-tit-wrap {
-        
-        .section-tit {
-            margin-bottom: 15px;
-        }
-
-        .section-tit-desc {
-            @include fontStyle(
-                $size: 1.8rem,
-                $weight: $font-light,
-                $family: $font-anton,
-            );
-        }
+    padding: 120px 0;
+    
+    .contact-content-container {
+        @include display(
+            $dp: grid,
+            $areas: ". .",
+            $columns: 50% 30%,
+            $justify: center,
+            $gap: 15px,
+        );
     }
-
     .contact-form-box {
-        border: 3px solid $main-color;
+        @include contentBg();
+        border: 1px solid $content-main-color;
         border-radius: 20px;
-        background: $rgbaBlack-05;
+        width: 100%;
         max-width: 700px;
         margin: 0 auto;
     }
@@ -572,12 +588,68 @@ main {
 
         .contact-btn {
             border: 1px solid $content-main-color;
-            color: $text-main-color;
-            @include fontStyle(
-                $size: 1.6rem,
-            );
             width: 100%;
             padding: 20px 0;
+            position: relative;
+            @include btnElHoverAction();
+            
+            span {
+                color: $text-main-color;
+                @include fontStyle(
+                    $size: 1.6rem,
+                );
+                position: relative;
+                z-index: 2;
+            }
+
+        }
+    }
+
+    .contact-qr-box {
+        @include display(
+            $dp: flex,
+            $direction: column,
+            $justify: center
+        );
+        @include contentBg();
+        box-sizing: border-box;
+        border: 1px solid $content-main-color;
+        border-radius: 20px;
+        padding: 20px 45px;
+        text-align: center;
+        height: 100%;
+
+        .qr-text-wrap {
+            text-align: center;
+            
+            .qr-tit {
+                @include fontStyle(
+                    $size: 1.8rem,
+                );
+                margin-bottom: 10px;
+            }
+    
+            .qr-desc {
+                @include fontStyle(
+                    $size: 1.6rem
+                );
+                letter-spacing: -0.05em;
+            }
+        }
+
+        .qr-wrap {
+            margin-top: 25px;
+            
+            a {
+                display: block;
+                border: 1px solid $white;
+                padding: 15px;
+                transition: background-color 0.3s;
+            }
+
+            &:hover {
+                a {background-color: $black;}
+            }
         }
     }
 
@@ -596,7 +668,7 @@ main {
     }
 
     .social {
-        background: $rgbaBlack-05;
+        @include contentBg();
         width: 100%;
         padding: 15px 0;
         text-align: center;
@@ -631,5 +703,9 @@ main {
             i,p {color: #ff00ff;}
         }
     }
+}
+
+.error {
+    animation: contactInputError infinite 0.2s;
 }
 /** ...contact section css **/

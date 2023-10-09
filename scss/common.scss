@@ -12,5 +12,12 @@
 // footer scss
 @import "./layouts/footer";
 
+//layer scss
+@import "./layouts/modal";
+
 // keyfraems animation scss
 @import "./helpers/animations";
+
+//Responsive scss
+@import "./layouts-narrow/header-narrow";
+@import "./layouts-narrow/main-narrow";

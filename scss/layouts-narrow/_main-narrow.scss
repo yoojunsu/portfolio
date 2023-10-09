@@ -1,0 +1,78 @@
+@media screen and (max-width: 821px) {
+
+    .visual-section {
+        .visual-content {
+            #visualAniWrap {
+                max-width: 20%;
+            }
+        }
+    }
+    
+    .about-section {
+        .about-my-box {
+            @include display(
+                $areas: ".",
+            );
+        }
+
+        .about-my {
+            padding: 50px 20px;
+
+            &:last-child {grid-area: 3;}
+        }
+    }
+
+    .work-section {
+        .work-list {
+            @include display($areas: ". .");
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 56%;
+    }
+
+    .about-section {
+        padding: 75px 0;
+
+        .about-top-wrap {
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .about-img-box {
+            width: 50%;
+        }
+
+        .about-greeting-box {
+            text-align: center;
+        }
+    }
+
+    .work-section {
+        padding: 75px 0;
+
+        .work-list {
+            @include display(
+                $areas: ".",
+                $gap: 15px,
+            );
+        }
+    }
+
+    .contact-section {
+        .contact-content-container {
+            @include display(
+                $areas: ".",
+                $columns: 1fr,
+
+            );
+        }
+
+        .contact-form-box {
+            order: 2;
+        }
+    }
+}

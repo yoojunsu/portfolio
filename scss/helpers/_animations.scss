@@ -62,4 +62,14 @@
         opacity: 0;
     }
 }
+
+@keyframes contactInputError {
+    0% {
+        border-color: #ff0000;
+    }
+
+    100% {
+        border-color: $content-main-color;
+    }
+}
 /** ...main animation keyframes **/
