@@ -1,0 +1,70 @@
+.modal-wrap {
+    display: none;
+    background-color: $rgbaBlack-03;
+    @include position(
+        $p: fixed,
+        $t: 0,
+        $l: 0,
+    );
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+}
+
+#formSendModal {
+    display: none;
+    box-sizing: border-box;
+    background-color: $rgbaBlack-05;
+    border: 1px solid $content-main-color;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 320px;
+    padding: 35px 25px;
+    text-align: center;
+    @include position(
+        $t: 60%,
+        $l: 50%
+    );
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: all 0.3s;
+
+    .modal-text-wrap {
+        margin-bottom: 35px;
+
+        .modal-tit {
+            @include fontStyle(
+                $family: $font-anton,
+                $size: 3.9rem,
+                $weight: $font-light
+            );
+            margin-bottom: 15px;
+        }
+
+        .modal-desc {
+            @include fontStyle($size: 1.8rem);
+            line-height: 1.4;
+        }
+    }
+
+    .modal-btn-wrap {
+        width: 80%;
+        margin: 0 auto;
+
+        #modalCloseBtn {
+            border: 1px solid $content-main-color;
+            width: 100%;
+            padding: 8px 0;
+            position: relative;
+            
+            span {
+                color: $content-main-color;
+                @include fontStyle($size: 1.8rem);
+                position: relative;
+                z-index: 2;
+            }
+
+            @include btnElHoverAction();
+        }
+    }
+}
