@@ -1,9 +1,9 @@
 <!-- main visual 섹션 -->
 <section class="visual-section" id="particleVisual">
-    <canvas id="particleVisual"></canvas>
     <div class="visual-content">
+        <div id="visualAniWrap"></div>
         <div class="visual-content-txt-box">
-            <h1 class="pofol-tit" id="typing"></h1>
+            <h1 class="pofol-tit" id="typing"> </h1>
             <div class="pofol-keyword-wrap">
                 <span class="pofol-keyword">
                     By. Yoo Jun Su
@@ -44,28 +44,33 @@
 <!-- about(어바웃) 섹션 -->
 <section class="about-section">
     <div class="section-inner">
-        <div class="section-tit-wrap">
+        <div class="section-tit-wrap" data-aos="fade-up">
+            <span class="section-num">01.</span>
             <h2 class="section-tit">ABOUT</h2>
         </div>
         
         <!-- about 상단 컨텐츠 -->
         <div class="about-top-wrap">
             <!-- about 프로필 이미지 -->
-            <div class="about-img-box ">
+            <div class="about-img-box" data-aos="fade-up">
                 <img src="./src/img/about-profile.png" alt="프로필 이미지" />
             </div>
             <!-- about 프로필 이미지 -->
             
             <!-- about 인사말 -->
-            <div class="about-greeting-box">
+            <div class="about-greeting-box" data-aos="fade-up">
                 <h3 class="about-greeting-tit">
                     Front-End Developer
                 </h3>
+                <h3 class="about-greeting-tit">
+                    Web  Publisher
+                </h3>
                 <p class="about-greeting-txt">
                     안녕하세요. <br />
-                    프로가 되고자 하는 개발자. <br />
+                    프로가 되고자 하는 웹 개발자. <br />
                     유준수 입니다.
                 </p>
+                <a href="" class="link-btn">Detail</a>
             </div>
             <!-- about 상단 컨텐츠 -->
         </div>
@@ -74,7 +79,7 @@
         <div class="about-main-wrap">
             <div class="about-my-box">
                 <!-- about 메인 - 프로필 컨텐츠 -->
-                <div class="about-my " id="aboutProfile">
+                <div class="about-my" id="aboutProfile" data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".about-my-box">
                     <div class="about-my-top">
                         <div class="about-my-icon">
                             <i class="fa-solid fa-address-card"></i>
@@ -115,6 +120,24 @@
                             <li class="about-my-profile">
                                 <i class="fa-regular fa-square-check"></i>
                                 <span class="about-my-desc about-profile-subject">
+                                    Add:
+                                </span>
+                                <span class="about-my-desc">
+                                    경기도 의정부시 거주
+                                </span>
+                            </li>
+                            <li class="about-my-profile">
+                                <i class="fa-regular fa-square-check"></i>
+                                <span class="about-my-desc about-profile-subject">
+                                    Highest Edu:
+                                </span>
+                                <span class="about-my-desc">
+                                    인덕대학교 공간디자인과 중퇴
+                                </span>
+                            </li>
+                            <li class="about-my-profile">
+                                <i class="fa-regular fa-square-check"></i>
+                                <span class="about-my-desc about-profile-subject">
                                     Edu:
                                 </span>
                                 <span class="about-my-desc">
@@ -136,7 +159,7 @@
                 <!-- ...about 메인 - 프로필 컨텐츠 -->
                 
                 <!-- about 메인 - 커리어(경력) 컨텐츠 -->
-                <div class="about-my " id="aboutCareer">
+                <div class="about-my" id="aboutCareer" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".about-my-box">
                     <div class="about-my-top">
                         <div class="about-my-icon">
                             <i class="fa-solid fa-building"></i>
@@ -203,7 +226,7 @@
                 <!-- ...about 메인 - 커리어(경력) 컨텐츠 -->
 
                 <!-- about 메인 - 스킬 컨텐츠 -->
-                <div class="about-my " id="aboutSkils">
+                <div class="about-my" id="aboutSkils" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".about-my-box">
                     <div class="about-my-top">
                         <div class="about-my-icon">
                             <i class="fa-solid fa-file-code"></i>
@@ -263,21 +286,16 @@
 <!-- work(프로젝트) 섹션 -->
 <section class="work-section">
     <div class="section-inner">
-        <div class="section-tit-wrap">
+        <div class="section-tit-wrap" data-aos="fade-up">
+            <span class="section-num">02.</span>
             <h2 class="section-tit">WORKS</h2>
         </div>
 
         <div class="work-main-wrap">
-            <div class="work-btn-box">
-                <button type="button" class="work-cate-btn active">All</button>
-                <button type="button" class="work-cate-btn">Project</button>
-                <button type="button" class="work-cate-btn">Practice</button>
-            </div>
-
             <div class="work-box">
                 <!-- 실무 프로젝트 -->
                 <ul class="work-list project-list">
-                    <li class="work project">
+                    <li class="work project" data-aos="zoom-in">
                         <div class="work-inner">
                             <span class="work-txt">WORK</span>
                             <h3 class="work-name">
@@ -289,7 +307,7 @@
                                 </li>
                                 <li class="work-info">
                                     <span>
-                                        사이트 구축 및 운영
+                                        사이트 구현 및 운영
                                     </span>
                                 </li>
                                 <li class="work-info">
@@ -309,11 +327,13 @@
                                 </li>
                             </ul>
                             <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a> 
+                                <a href="http://exobiomekorea.kr/" class="work-link" target="_blank">
+                                    <span>URL</span>
+                                </a> 
                             </div>
                         </div>
                     </li>
-                    <li class="work project">
+                    <li class="work project" data-aos="zoom-in">
                         <div class="work-inner">
                             <span class="work-txt">WORK</span>
                             <h3 class="work-name">
@@ -324,7 +344,7 @@
                                     <span>미인대회 투표 웹앱</span>
                                 </li>
                                 <li class="work-info">
-                                    <span>구축 및 운영 & 관리자페이지 구축</span>
+                                    <span>구현 및 운영 & 관리자페이지 구축</span>
                                 </li>
                                 <li class="work-info">
                                     <span>퍼블리싱 100%</span>
@@ -343,11 +363,16 @@
                                 </li>
                             </ul>
                             <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a> 
+                                <a href="https://mo2mo2.kr/contest" class="work-link" target="_blank">
+                                    <span>URL</span>
+                                </a> 
+                                <a href="https://play.google.com/store/search?q=mo2mo2&c=apps&hl=ko-KR" class="work-link" target="_blank">
+                                    <span>STORE</span>
+                                </a> 
                             </div>
                         </div>
                     </li>
-                    <li class="work project">
+                    <li class="work project" data-aos="zoom-in">
                         <div class="work-inner">
                             <span class="work-txt">WORK</span>
                             <h3 class="work-name">
@@ -358,7 +383,7 @@
                                     <span>미인대회 주최 협회 사이트</span>
                                 </li>
                                 <li class="work-info">
-                                    <span>구축 및 운영 & 관리자페이지 구축</span>
+                                    <span>구현 및 운영 & 관리자페이지 구축</span>
                                 </li>
                                 <li class="work-info">
                                     <span>퍼블리싱 100%</span>
@@ -377,243 +402,20 @@
                                 </li>
                             </ul>
                             <div class="work-link-wrap">
-                                <a href="" class="work-link">PC</a>
-                                <a href="" class="work-link">MOBILE</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="work project">
-                        <div class="work-inner">
-                            <span class="work-txt">WORK</span>
-                            <h3 class="work-name">미인대회 리뉴얼</h3>
-                            <ul class="work-info-list">
-                                <li class="work-info">
-                                    <span>미인대회 소개&참가신청 사이트 (10개)</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>구축 및 운영</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>퍼블리싱 100%</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>PHP(Laravel)</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>적응형 웹</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>HTML</span>
-                                    <span>CSS</span> 
-                                    <span>JAVASCRIPT</span>
-                                </li>
-                            </ul>
-                            <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="work project">
-                        <div class="work-inner">
-                            <span class="work-txt">WORK</span>
-                            <h3 class="work-name">
-                                한국프리미엄브랜드 진흥원
-                            </h3>
-                            <ul class="work-info-list">
-                                <li class="work-info">
-                                    <span>행사 주최 업체 사이트</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>부분 리뉴얼 & 운영</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>퍼블리싱 100%</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>PHP</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>적응형 웹</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>HTML</span>
-                                    <span>CSS</span> 
-                                    <span>JAVASCRIPT</span>
-                                </li>
-                            </ul>
-                            <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="work project">
-                        <div class="work-inner">
-                            <span class="work-txt">WORK</span>
-                            <h3 class="work-name">헬시엑소</h3>
-                            <ul class="work-info-list">
-                                <li class="work-info">
-                                    <span>엑소바이옴코리아 소속 건강식품 쇼핑몰</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>구축 및 운영</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>퍼블리싱 100%</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>PHP(Laravel)</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>적응형 웹</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>HTML</span>
-                                    <span>SCSS</span>
-                                    <span>CSS</span> 
-                                    <span>JAVASCRIPT</span>
-                                </li>
-                            </ul>
-                            <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="work project">
-                        <div class="work-inner">
-                            <span class="work-txt">WORK</span>
-                            <h3 class="work-name">결혼정보회사 DB수집 랜딩</h3>
-                            <ul class="work-info-list">
-                                <li class="work-info">
-                                    <span>결혼정보회사 고객 DB수집 페이지</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>제작</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>퍼블리싱 100%</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>ASP</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>모바일 웹</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>HTML</span>
-                                    <span>CSS</span> 
-                                    <span>JAVASCRIPT</span>
-                                </li>
-                            </ul>
-                            <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="work project">
-                        <div class="work-inner">
-                            <span class="work-txt">WORK</span>
-                            <h3 class="work-name">퍼플스</h3>
-                            <ul class="work-info-list">
-                                <li class="work-info">
-                                    <span>결혼정보회사 사이트</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>신규페이지 제작</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>퍼블리싱 50% (신규페이지만 제작)</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>ASP</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>적응형 웹</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>HTML</span>
-                                    <span>CSS</span> 
-                                    <span>JAVASCRIPT</span>
-                                </li>
-                            </ul>
-                            <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="work project">
-                        <div class="work-inner">
-                            <span class="work-txt">WORK</span>
-                            <h3 class="work-name">디노블</h3>
-                            <ul class="work-info-list">
-                                <li class="work-info">
-                                    <span>결혼정보회사 사이트</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>유지보수 운영 및 부분 리뉴얼</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>퍼블리싱 100%</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>ASP</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>적응형 웹</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>HTML</span>
-                                    <span>CSS</span> 
-                                    <span>JAVASCRIPT</span>
-                                </li>
-                            </ul>
-                            <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="work project">
-                        <div class="work-inner">
-                            <span class="work-txt">WORK</span>
-                            <h3 class="work-name">르매리</h3>
-                            <ul class="work-info-list">
-                                <li class="work-info">
-                                    <span>결혼정보회사 사이트</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>유지보수 운영</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>퍼블리싱 100%</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>ASP</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>적응형 웹</span>
-                                </li>
-                                <li class="work-info">
-                                    <span>HTML</span>
-                                    <span>CSS</span> 
-                                    <span>JAVASCRIPT</span>
-                                </li>
-                            </ul>
-                            <div class="work-link-wrap">
-                                <a href="" class="work-link">VIEW</a>
+                                <a href="http://kobeas.kr/" class="work-link" target="_blank">
+                                    <span>URL</span>
+                                </a>
                             </div>
                         </div>
                     </li>
                 </ul>
                 <!--...실무 프로젝트  -->
 
-                <!-- 개인 프로젝트 -->
-                <!-- <ul class="work-list practice-list">
-                    <li class="work practice">
-                        
-                    </li>
-                </ul> -->
-                <!-- ...개인 프로젝트 -->
-
-
+                <div class="btn-wrap">
+                    <button type="button" id="loadMoreBtn">
+                        <span>MORE</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -623,63 +425,81 @@
 <!-- contact(컨택) 섹션 -->
 <section class="contact-section">
     <div class="section-inner">
-        <div class="section-tit-wrap">
+        <div class="section-tit-wrap" data-aos="fade-up">
+            <span class="section-num">03.</span>
             <h3 class="section-tit">CONTACT</h3>
-            <span class="section-tit-desc">
-                I hope See You Soon
-            </span>
         </div>
 
-        <div class="contact-form-box ">
-            <form target="_self" action="https://script.google.com/macros/s/AKfycbzNQwADmSNa3IhsHeiJt4ESrMD0og1V-5TxJYGirOci1-Azu3VlDaLtx0BE1IvMqlop/exec" method="post">
-                <div class="contact-form-inner">
-                    <div class="contact-form">
-                        <label for="">NAME</label>
-                        <div class="contact-form-input">
-                            <input type="text" name="name" id="userName" autocomplete="off" />
+        <div class="contact-content-container">
+            <div class="contact-form-box" data-aos="fade-up" data-aos-delay="200">
+                <form id="contactForm">
+                    <div class="contact-form-inner">
+                        <div class="contact-form">
+                            <label for="userName">NAME</label>
+                            <div class="contact-form-input">
+                                <input type="text" name="name" id="userName" autocomplete="off" />
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <label for="userEmail">E-MAIL</label>
+                            <div class="contact-form-input">
+                                <input type="text" name="email" id="userEmail" autocomplete="off" />
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <label for="userMsg">MESSAGE</label>
+                            <div class="contact-form-input">
+                                <textarea name="msg" id="userMsg" autocomplete="auto"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-btn">
+                            <button type="button" class="contact-btn" id="resetBtn">
+                                <span>RESET</span>
+                            </button>
+                            <button type="button" class="contact-btn" id="sendBtn">
+                                <span>SEND</span>
+                            </button>
                         </div>
                     </div>
+                </form>
+            </div>
 
-                    <div class="contact-form">
-                        <label for="">E-MAIL</label>
-                        <div class="contact-form-input">
-                            <input type="text" name="email" id="userEmail" autocomplete="off" />
-                        </div>
+            <div class="contact-qr-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-qr-inner">
+                    <div class="qr-text-wrap">
+                        <h3 class="qr-tit">Kakao Open Chat</h3>
+                        <p class="qr-desc">I hope see you soon!</p>
                     </div>
-
-                    <div class="contact-form">
-                        <label for="">MESSAGE</label>
-                        <div class="contact-form-input">
-                            <textarea name="msg" id="userMsg" autocomplete="auto"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-btn">
-                        <button type="submit" class="contact-btn send-btn">SEND</button>
-                        <button type="button" class="contact-btn reset-btn">RESET</button>
+                    <div class="qr-wrap">
+                        <a href="https://open.kakao.com/o/sot7q6Df" target="_blank">
+                            <img src="/src/img/open-qr.png" alt="YJS 카카오 오픈 채팅방 QR" />
+                        </a>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
 
 
         <div class="contact-social-box">
             <div class="contact-social-wrap">
-                <a href="" class="social" id="socialGit">
+                <a href="https://github.com/yoojunsu" class="social" id="socialGit" target="_blank" data-aos="fade-up" data-aos-delay="100">
                     <i class="xi-github"></i>
                     <p class="social-name">
                         GitHub
                     </p>
                 </a>
 
-                <a href="" class="social" id="socialTstory">
+                <a href="https://joroki.tistory.com/" class="social" id="socialTistory" target="_blank" data-aos="fade-up" data-aos-delay="200">
                     <i class="xi-blogger"></i>
                     <p class="social-name">
                         T-Story
                     </p>
                 </a>
 
-                <a href="" class="social" id="socialInsta">
+                <a href="https://www.instagram.com/joroki__/" class="social" id="socialInsta" target="_blank" data-aos="fade-up" data-aos-delay="300">
                     <i class="xi-instagram"></i>
                     <p class="social-name">
                         Instagram
@@ -691,6 +511,10 @@
 </section>
 <!-- ...contact(컨택) 섹션 -->
 
-<!-- 좌측 fixed 컨텐츠 -->
+<!-- form 전송 완료시 layer -->
+<?php @include "./_include/form-send-layer.php" ?>
+<!-- ...form 전송 완료시 layer -->
 
-<!-- ...좌측 fixed 컨텐츠 -->
+<!-- 컨텐츠 영역 fixed bg -->
+<div id="particleContent"></div>
+<!-- ...컨텐츠 영역 fixed bg -->
