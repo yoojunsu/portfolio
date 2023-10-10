@@ -29,6 +29,12 @@
     </main>
     <!-----...main ----->
 
+    <!----- modal ------>
+    <div class="modal-wrap">
+        <?php @include "./_include/form-send-layer.php" ?>
+    </div>
+    <!----- ...modal ------>
+
     <!----- footer ----->
     <footer>
 

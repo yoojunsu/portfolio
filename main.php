@@ -511,10 +511,6 @@
 </section>
 <!-- ...contact(컨택) 섹션 -->
 
-<!-- form 전송 완료시 layer -->
-<?php @include "./_include/form-send-layer.php" ?>
-<!-- ...form 전송 완료시 layer -->
-
 <!-- 컨텐츠 영역 fixed bg -->
 <div id="particleContent"></div>
 <!-- ...컨텐츠 영역 fixed bg -->

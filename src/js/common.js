@@ -130,10 +130,15 @@ window.addEventListener("DOMContentLoaded", () => {
     const FORM_RESET_BTN = document.getElementById("resetBtn");
     FORM_SEND_BTN.addEventListener("click",() => {
         sendMessage();
-        console.log("폼전송!");
     });
 
     FORM_RESET_BTN.addEventListener("click",formReset);
+
+    //form 전송 완료 확인 팝업 닫기
+    const FORM_SEND_MODAL_CLOSE_BTN = document.getElementById("modalCloseBtn");
+    FORM_SEND_MODAL_CLOSE_BTN.addEventListener("click", () => {
+        modalClose(FORM_SEND_MODAL);
+    });
 });
 
 
@@ -452,9 +457,34 @@ let loadMoreProject = () => {
 }
 
 /**
+ * layer modal 오픈 함수
+ */
+let modalOpen = (modalTarget) => {
+    activeClass = "active";
+
+    MODAL_WRAP.style.display = "block";
+    modalTarget.style.display = "block";
+    setTimeout( () => {
+        modalTarget.classList.add(activeClass);
+    },300);
+}
+
+let modalClose = (modalTarget) => {
+    activeClass = "active";
+    modalTarget.classList.remove(activeClass)
+    setTimeout( () => {
+        MODAL_WRAP.style.display = "none";
+        modalTarget.style.display = "none";
+    },500);
+}
+/**
  * contact form 전송 함수
  */
 const DUMMY_URL = "https://jsonplaceholder.typicode.com/posts";
+const MODAL_WRAP = document.querySelector(".modal-wrap");
+const FORM_SEND_MODAL = document.getElementById("formSendModal");
+const FORM_SEND_NAME_EL = document.getElementById("formSendName");
+const FORM_SEND_EMAIL_EL = document.getElementById("formSendEmail");
 let sendMessage = () => {
     const NAME_INPUT = document.getElementById("userName");
     const EMAIL_INPUT = document.getElementById("userEmail");
@@ -494,6 +524,9 @@ let sendMessage = () => {
         "msg": MSG_VALUE,
     }).then( (res) => {
         console.log(res.data);
+        FORM_SEND_NAME_EL.textContent = res.data.name;
+        FORM_SEND_EMAIL_EL.textContent = res.data.email;
+        modalOpen(FORM_SEND_MODAL);
     }).catch( (err) => {
         console.error(err);
     });

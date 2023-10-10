@@ -18,7 +18,7 @@
     border: 1px solid $content-main-color;
     border-radius: 20px;
     width: 80%;
-    max-width: 320px;
+    max-width: 420px;
     padding: 35px 25px;
     text-align: center;
     @include position(
@@ -44,6 +44,10 @@
         .modal-desc {
             @include fontStyle($size: 1.8rem);
             line-height: 1.4;
+            word-break: keep-all;
+            margin-bottom: 15px;
+
+            &:last-child {margin-bottom: 0;}
         }
     }
 
@@ -66,5 +70,10 @@
 
             @include btnElHoverAction();
         }
+    }
+
+    &.active {
+        top: 50%;
+        opacity: 1;
     }
 }
