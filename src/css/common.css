@@ -1136,7 +1136,7 @@ main #particleContent {
   border: 1px solid #04a35b;
   border-radius: 20px;
   width: 80%;
-  max-width: 320px;
+  max-width: 420px;
   padding: 35px 25px;
   text-align: center;
   position: absolute;
@@ -1160,6 +1160,11 @@ main #particleContent {
 #formSendModal .modal-text-wrap .modal-desc {
   font-size: 1.8rem;
   line-height: 1.4;
+  word-break: keep-all;
+  margin-bottom: 15px;
+}
+#formSendModal .modal-text-wrap .modal-desc:last-child {
+  margin-bottom: 0;
 }
 #formSendModal .modal-btn-wrap {
   width: 80%;
@@ -1194,6 +1199,37 @@ main #particleContent {
 #formSendModal .modal-btn-wrap #modalCloseBtn:hover span {
   color: #000;
   font-weight: 600;
+}
+#formSendModal.active {
+  top: 50%;
+  opacity: 1;
+}
+
+#loadingScreen {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+#loadingScreen .loading-screen-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#loadingScreen #loadingAniWrap {
+  max-width: 10%;
 }
 
 /** animations class **/

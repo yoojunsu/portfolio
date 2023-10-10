@@ -120,15 +120,6 @@
                             <li class="about-my-profile">
                                 <i class="fa-regular fa-square-check"></i>
                                 <span class="about-my-desc about-profile-subject">
-                                    Add:
-                                </span>
-                                <span class="about-my-desc">
-                                    경기도 의정부시 거주
-                                </span>
-                            </li>
-                            <li class="about-my-profile">
-                                <i class="fa-regular fa-square-check"></i>
-                                <span class="about-my-desc about-profile-subject">
                                     Highest Edu:
                                 </span>
                                 <span class="about-my-desc">

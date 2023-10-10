@@ -456,6 +456,30 @@ let loadMoreProject = () => {
     }
 }
 
+
+/**
+ * loading animation
+ */
+const LOADING_SCREEN = document.getElementById('loadingScreen');
+const LOADING_ANI_BOX = document.getElementById('loadingAniWrap');
+let loadingAni = bodymovin.loadAnimation({
+    wrapper: LOADING_ANI_BOX,
+    animType: 'svg',
+    loop: true,
+    autoplay: false,
+    path: "../lottie/loading.json",
+});
+
+let loadingScreenShow = () => {
+    loadingAni.play();
+    LOADING_SCREEN.style.display = "block";
+}
+
+let loadingScreenHide = () => {
+    loadingAni.pause();
+    LOADING_SCREEN.style.display = "none";
+}
+
 /**
  * layer modal 오픈 함수
  */
@@ -518,17 +542,21 @@ let sendMessage = () => {
         return;
     }
 
+    loadingScreenShow();
+
     axios.post(DUMMY_URL, {
         "name": NAME_VALUE,
         "email": EMAIL_VALUE,
         "msg": MSG_VALUE,
     }).then( (res) => {
+        loadingScreenHide();
         console.log(res.data);
         FORM_SEND_NAME_EL.textContent = res.data.name;
         FORM_SEND_EMAIL_EL.textContent = res.data.email;
         modalOpen(FORM_SEND_MODAL);
     }).catch( (err) => {
         console.error(err);
+        loadingScreenHide();
     });
 }
 

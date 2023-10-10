@@ -35,6 +35,10 @@
     </div>
     <!----- ...modal ------>
 
+    <!----- loading ------>
+    <?php @include "./_include/loading.php" ?>
+    <!----- ...loading ------>
+
     <!----- footer ----->
     <footer>
 
