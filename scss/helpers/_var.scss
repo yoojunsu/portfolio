@@ -1,5 +1,4 @@
 $img-url: "../../src/img";
-$intro-bg: radial-gradient(circle at 50% 50%, rgb(10, 25, 47), rgb(0, 0, 0) 50% 50%);
 $black: #000;
 $white: #fff;
 $rgbaBlack-01: rgba(0, 0, 0, 0.1);
@@ -19,4 +18,5 @@ $font-bold: 600;
 $font-midium: 500;
 $font-regular: 400;
 $font-light: 300;
+$intro-bg: radial-gradient(circle at 50% 50%, $third-color, rgb(0, 0, 0) 50% 50%);
 $transition-intro-timer: 0.5s;
