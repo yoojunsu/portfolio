@@ -138,6 +138,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const FORM_SEND_MODAL_CLOSE_BTN = document.getElementById("modalCloseBtn");
     FORM_SEND_MODAL_CLOSE_BTN.addEventListener("click", () => {
         modalClose(FORM_SEND_MODAL);
+
+        //모달 닫기시 작성한 form 내용 reset
+        formReset();
     });
 });
 
@@ -147,11 +150,13 @@ let activeClass;
 const NAV = document.querySelector("nav");
 const NAV_OPEN_BTN = document.getElementById("navOpenBtn");
 /**
- * 디바이스 체크 함수
+ * 디바이스 체크 및 대응 함수
  */
 let checkDivice = () => {
-    let screenWidth = window.innerWidth;
 
+    //디바이스 체크 및 동작 대응
+    let screenWidth = window.innerWidth;
+    
     if(screenWidth < 500) {
         NAV.style.display = "none";
         NAV.classList.remove("active");
