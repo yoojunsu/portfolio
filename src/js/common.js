@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
         duration: 1500,
     });
 
-    //최초 로드시 checkDivice 함수 실행 및 리사이즈시 checkDivice 함수실행
+    //최초 로드시 checkDivice 함수 실행 및 리사이즈시 동일 함수 실행
     checkDivice();
     window.addEventListener("resize",checkDivice);
 
@@ -160,6 +160,10 @@ let checkDivice = () => {
         NAV.style.display = "block";
         NAV_OPEN_BTN.classList.remove("active");
     }
+
+    //모바일 browse url주소창 height 100vh 값 대응을위한 설정
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
 }
 
 /**
