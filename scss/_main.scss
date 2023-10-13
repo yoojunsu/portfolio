@@ -262,7 +262,7 @@ main {
             letter-spacing: 0.3em;
         }
 
-        &-desc {
+        &-txt {
             @include fontStyle($size: 1.6rem);
             word-break: keep-all;
             line-height: 1.4;

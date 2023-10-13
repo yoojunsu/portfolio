@@ -91,58 +91,70 @@
                     <div class="about-my-content">
                         <ul class="about-my-profile-list">
                             <li class="about-my-profile">
-                                <i class="fa-regular fa-square-check"></i>
-                                <span class="about-my-desc about-profile-subject">
-                                    Name:
-                                </span>
-                                <span class="about-my-desc">
+                                <div class="about-subject-wrap">
+                                    <i class="fa-regular fa-square-check"></i>
+                                    <span class="about-my-txt about-profile-subject">
+                                        Name:
+                                    </span>
+                                </div>
+                                <span class="about-my-txt">
                                     유준수
                                 </span>
                             </li>
                             <li class="about-my-profile">
-                                <i class="fa-regular fa-square-check"></i>
-                                <span class="about-my-desc about-profile-subject">
-                                    Call:
-                                </span>
-                                <span class="about-my-desc">
+                                <div class="about-subject-wrap">
+                                    <i class="fa-regular fa-square-check"></i>
+                                    <span class="about-my-txt about-profile-subject">
+                                        Call:
+                                    </span>
+                                </div>
+                                <span class="about-my-txt">
                                     010-8527-9631
                                 </span>
                             </li>
                             <li class="about-my-profile">
-                                <i class="fa-regular fa-square-check"></i>
-                                <span class="about-my-desc about-profile-subject">
-                                    Add:
-                                </span>
-                                <span class="about-my-desc">
+                                <div class="about-subject-wrap">
+                                    <i class="fa-regular fa-square-check"></i>
+                                    <span class="about-my-txt about-profile-subject">
+                                        Add:
+                                    </span>
+                                </div>
+                                <span class="about-my-txt">
                                     경기도 의정부시 거주
                                 </span>
                             </li>
                             <li class="about-my-profile">
-                                <i class="fa-regular fa-square-check"></i>
-                                <span class="about-my-desc about-profile-subject">
-                                    Highest Edu:
-                                </span>
-                                <span class="about-my-desc">
+                                <div class="about-subject-wrap">
+                                    <i class="fa-regular fa-square-check"></i>
+                                    <span class="about-my-txt about-profile-subject">
+                                        School:
+                                    </span>
+                                </div>
+                                <span class="about-my-txt">
                                     인덕대학교 공간디자인과 중퇴
                                 </span>
                             </li>
                             <li class="about-my-profile">
-                                <i class="fa-regular fa-square-check"></i>
-                                <span class="about-my-desc about-profile-subject">
-                                    Edu:
-                                </span>
-                                <span class="about-my-desc">
+                                <div class="about-subject-wrap">
+                                    <i class="fa-regular fa-square-check"></i>
+                                    <span class="about-my-txt about-profile-subject">
+                                        Edu:
+                                    </span>
+                                </div>
+                                <span class="about-my-txt">
                                     더조은 컴퓨터 아카데미
                                     웹퍼블리셔 UI/UX 프론트엔드 양성과정 수료
                                 </span>
                             </li>
                             <li class="about-my-profile">
-                                <i class="fa-regular fa-square-check"></i>
-                                <span class="about-my-desc">
-                                    단순히 열심히 하는 <strong>'직원'</strong>이 아닌,
-                                    이름을 걸고 의미있는 결과를 만들어내는 <strong>'프로'</strong>가 되고자합니다.
-                                    빠르게 변하는 웹 트렌드에 맞춰서 스스로 디벨롭 하여 이름 석자를 걸고 결과를 만드는 <strong>'프로'</strong>의 모습을 보여드리겠습니다.
-                                </span>
+                                <div class="about-subject-wrap">
+                                    <i class="fa-regular fa-square-check"></i>
+                                    <span class="about-my-txt">
+                                        단순히 열심히 하는 <strong>'직원'</strong>이 아닌,
+                                        이름을 걸고 의미있는 결과를 만들어내는 <strong>'프로'</strong>가 되고자합니다.
+                                        빠르게 변하는 웹 트렌드에 맞춰서 스스로 디벨롭 하여 이름 석자를 걸고 결과를 만드는 <strong>'프로'</strong>의 모습을 보여드리겠습니다.
+                                    </span>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -168,17 +180,17 @@
 
                                 <ul class="about-career-work-list">
                                     <li class="about-my-career">
-                                        <span class="about-my-desc">
+                                        <span class="about-my-txt">
                                             웹 개발팀 주임
                                         </span>
                                     </li>
                                     <li class="about-my-career">
-                                        <span class="about-my-desc">
+                                        <span class="about-my-txt">
                                             2021.02 ~ ing
                                         </span>
                                     </li>
                                     <li class="about-my-career">
-                                        <span class="about-my-desc">
+                                        <span class="about-my-txt">
                                             퍼플스 그룹 소속 업체<br />
                                             웹&앱 퍼블리싱 및 프론트개발 <br />
                                             그룹 소속 전체 사이트 운영
@@ -193,17 +205,17 @@
                                 </h4>
                                 <ul class="about-career-work-list">
                                     <li class="about-my-career">
-                                        <span class="about-my-desc">
+                                        <span class="about-my-txt">
                                             웹 서비스팀 사원
                                         </span>
                                     </li>
                                     <li class="about-my-career">
-                                        <span class="about-my-desc">
+                                        <span class="about-my-txt">
                                             2020.08 ~ 2020. 11
                                         </span>
                                     </li>
                                     <li class="about-my-career">
-                                        <span class="about-my-desc">
+                                        <span class="about-my-txt">
                                             카페24 기반 쇼핑몰 템플릿 퍼블리싱<br /> 
                                             기존 클라이언트 유지보수 <br />
                                             클라이언트 컨택 및 응대
@@ -466,7 +478,7 @@
                     </div>
                     <div class="qr-wrap">
                         <a href="https://open.kakao.com/o/sot7q6Df" target="_blank">
-                            <img src="/src/img/open-qr.png" alt="YJS 카카오 오픈 채팅방 QR" />
+                            <img src="./src/img/open-qr.png" alt="YJS 카카오 오픈 채팅방 QR" />
                         </a>
                     </div>
                 </div>
