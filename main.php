@@ -529,17 +529,17 @@
                     </p>
                 </a>
 
-                <a href="https://joroki.tistory.com/" class="social" id="socialTistory" target="_blank" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://joroki.tistory.com/" class="social" id="socialTstory" target="_blank" data-aos="fade-up" data-aos-delay="200">
                     <i class="xi-blogger"></i>
                     <p class="social-name">
                         T-Story
                     </p>
                 </a>
 
-                <a href="https://www.instagram.com/joroki__/" class="social" id="socialInsta" target="_blank" data-aos="fade-up" data-aos-delay="300">
-                    <i class="xi-instagram"></i>
+                <a href="https://yoojunsu.notion.site/fcb8932608004e1ab6da9046a1856615" class="social" id="socialInsta" target="_blank" data-aos="fade-up" data-aos-delay="300">
+                    <i class="xi-paper-o"></i>
                     <p class="social-name">
-                        Instagram
+                        Notion
                     </p>
                 </a>
             </div>

@@ -39,12 +39,6 @@
     <?php @include "./_include/loading.php" ?>
     <!----- ...loading ------>
 
-    <!----- footer ----->
-    <footer>
-
-    </footer>
-    <!----- ...footer ----->
-
     <!-- js -->
     <script src="./src/js/common.js"></script>
     <script src="./src/js/intro.js"></script>
