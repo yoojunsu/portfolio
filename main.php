@@ -287,7 +287,7 @@
     </div>
 </section>
 <!-- ...about(어바웃) 섹션 -->
- 
+
 <!-- work(프로젝트) 섹션 -->
 <section class="work-section">
     <div class="section-inner">
@@ -427,11 +427,43 @@
 </section>
 <!-- ...work(프로젝트) 섹션 -->
 
+<!-- Note(블로그) 섹션 -->
+<section class="note-section">
+    <div class="section-inner">
+        <div class="section-tit-wrap" data-aos="fade-up">
+            <span class="section-num">03.</span>
+            <h2 class="section-tit">BLOG</h2>
+        </div>
+
+        <div class="note-content-container">
+            <div class="note-content-tit-wrap" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="note-content-tit">
+                    My Note Tstory
+                </h3>
+                <p class="note-content-desc">
+                    개발자로서 실무에서 느끼고 공부가 필요한 부분을 습득하여 기록하고,
+                    간단하게 정보 전달을 할 수 있도록 총 <strong id="blogCountText"></strong> 개의 포스트를 
+                    T-story 블로그에 작성하며 운영하고있습니다.
+                </p>
+                <a href="https://joroki.tistory.com/" class="link-btn">
+                    <span>블로그 보러가기</span>
+                </a>
+            </div>
+
+            <div class="note-content-wrap" data-aos="fade-up" data-aos-delay="200">
+                <ul id="blogContentList">
+                    <!-- 비동기 통신을 통해 api로 가공하여 요소 출력 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ...Note(블로그) 섹션 -->
 <!-- contact(컨택) 섹션 -->
 <section class="contact-section">
     <div class="section-inner">
         <div class="section-tit-wrap" data-aos="fade-up">
-            <span class="section-num">03.</span>
+            <span class="section-num">04.</span>
             <h3 class="section-tit">CONTACT</h3>
         </div>
 

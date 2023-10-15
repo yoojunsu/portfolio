@@ -644,6 +644,23 @@ main #particleContent {
   line-height: 1.5;
   margin-top: 15px;
 }
+.about-section .about-greeting-box .link-btn {
+  display: block;
+  border: 1px solid #ccd6f6;
+  font-size: 1.6rem;
+  text-align: center;
+  max-width: 200px;
+  padding: 10px 0;
+  margin: 20px auto 0;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.about-section .about-greeting-box .link-btn:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
 .about-section .about-my-box {
   display: grid;
   grid-template-areas: ". .";
@@ -942,6 +959,176 @@ main #particleContent {
 }
 
 /** ...works section css **/
+/** Note section css **/
+.note-section {
+  padding: 120px 0;
+}
+.note-section .note-content-container {
+  display: grid;
+  grid-template-areas: ". .";
+  grid-auto-columns: 0.5fr 1fr;
+  gap: 15px;
+}
+.note-section .note-content-tit-wrap,
+.note-section .note-content-wrap {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  height: 500px;
+}
+.note-section .note-content-tit-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+.note-section .note-content-tit-wrap .note-content-tit {
+  font-size: 3.2rem;
+}
+.note-section .note-content-tit-wrap .note-content-desc {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  word-break: keep-all;
+}
+.note-section .note-content-tit-wrap .note-content-desc strong {
+  border-bottom: 1px solid #04a35b;
+}
+.note-section .note-content-tit-wrap .link-btn {
+  border: 1px solid #04a35b;
+  border-radius: 7px;
+  text-align: center;
+  width: 70%;
+  max-width: 180px;
+  padding: 7px 0;
+  position: relative;
+  overflow: hidden;
+}
+.note-section .note-content-tit-wrap .link-btn span {
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: relative;
+  z-index: 2;
+}
+.note-section .note-content-tit-wrap .link-btn::after {
+  content: "";
+  background: #04a35b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.note-section .note-content-tit-wrap .link-btn:hover::after {
+  width: 100%;
+}
+.note-section .note-content-tit-wrap .link-btn:hover span {
+  color: #000;
+  font-weight: 600;
+}
+.note-section .note-content-wrap {
+  padding: 50px;
+  overflow-y: auto;
+}
+.note-section .note-content-wrap::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+.note-section .note-content-wrap::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+.note-section .note-content-wrap::-webkit-scrollbar-thumb {
+  background: #04a35b;
+  border-radius: 8px;
+  height: 10%;
+}
+.note-section .note-content-wrap #blogContentList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+.note-section .note-content-wrap #blogContentList .blog-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  border-bottom: 1px solid #04a35b;
+  padding-bottom: 50px;
+}
+.note-section .note-content-wrap #blogContentList .blog-content:last-child {
+  border-bottom: 0;
+}
+.note-section .note-content-wrap #blogContentList .blog-content span {
+  font-size: 1.3rem;
+}
+.note-section .note-content-wrap #blogContentList .blog-content h4 {
+  font-size: 3rem;
+  line-height: 1.4;
+  word-break: keep-all;
+  max-width: 60%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.note-section .note-content-wrap #blogContentList .blog-content .content-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.note-section .note-content-wrap #blogContentList .blog-content .content-link span {
+  font-size: 1.7rem;
+}
+.note-section .note-content-wrap #blogContentList .blog-content .content-link i {
+  font-size: 1.7rem;
+  margin-top: -2px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.note-section .note-content-wrap #blogContentList .blog-content .content-link:hover {
+  opacity: 1;
+}
+.note-section .note-content-wrap #blogContentList .blog-content .content-link:hover i {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+/** ...Note section css **/
 /** contact section css **/
 .contact-section {
   padding: 120px 0;
@@ -1459,6 +1646,14 @@ main #particleContent {
   .work-section .work-list {
     grid-template-areas: ". .";
   }
+  .note-section .note-content-container {
+    grid-template-areas: ".";
+    grid-auto-columns: 1fr;
+  }
+  .note-section .note-content-tit-wrap,
+  .note-section .note-content-wrap {
+    height: 400px;
+  }
 }
 @media screen and (max-width: 500px) {
   html {
@@ -1484,6 +1679,12 @@ main #particleContent {
   .work-section .work-list {
     grid-template-areas: ".";
     gap: 15px;
+  }
+  .note-section .note-content-container .note-content-wrap {
+    padding: 25px 20px;
+  }
+  .note-section .note-content-container #blogContentList .blog-content h4 {
+    max-width: 100%;
   }
   .contact-section .contact-content-container {
     grid-template-areas: ".";

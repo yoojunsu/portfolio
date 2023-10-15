@@ -27,6 +27,20 @@
             @include display($areas: ". .");
         }
     }
+
+    .note-section {
+        .note-content-container {
+            @include display(
+                $areas: ".",
+                $columns: 1fr,
+            )
+        }
+
+        .note-content-tit-wrap,
+        .note-content-wrap {
+            height: 400px;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -62,12 +76,23 @@
         }
     }
 
+    .note-section {
+        .note-content-container {
+            .note-content-wrap {
+                padding: 25px 20px;
+            }
+            
+            #blogContentList .blog-content h4 {
+                max-width: 100%;
+            }
+        }
+    }
+
     .contact-section {
         .contact-content-container {
             @include display(
                 $areas: ".",
                 $columns: 1fr,
-
             );
         }
 

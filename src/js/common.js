@@ -125,6 +125,9 @@ window.addEventListener("DOMContentLoaded", () => {
         loadMoreProject();
     });
 
+    //티스토리 blog 데이터 셋팅
+    blogDataSet();
+
     //contact 문의 form 동작
     const FORM_SEND_BTN = document.getElementById("sendBtn");
     const FORM_RESET_BTN = document.getElementById("resetBtn");
@@ -569,6 +572,42 @@ let sendMessage = () => {
     });
 }
 
+
+/**
+ * 티스토리 블로그 게시물 get & 셋팅
+ */
+let token = "69c451451f1534208377e6f59804259e_cd72d6d4885791c064acfeb57143c82f";
+let blogDataSet = async() => {
+    try {
+        const listRes = await axios.get(`https://www.tistory.com/apis/post/list?access_token=${token}&output=json&blogName=Joroki&page=1`);
+        const blogPostData = listRes.data.tistory.item.posts;
+        let blogPostHtml = '';
+        for(let i = 0; i < blogPostData.length; i++) {
+            let blogPost = blogPostData[i];
+
+            blogPostHtml += `
+                <li class="blog-content">
+                    <span class="post-num-wrap">
+                        No.
+                        <strong class="post-number">${blogPost.id}</strong>
+                    </span>
+                    <span class="content-date">${blogPost.date}</span>
+                    <h4 class="content-title">${blogPost.title}</h4>
+                    <a href="${blogPost.postUrl}" class="content-link" target="_blank">
+                        <span>Go to Post</span>
+                        <i class="xi-long-arrow-right"></i>
+                    </a>
+                </li>
+            `
+        }
+
+        document.getElementById("blogContentList").innerHTML = blogPostHtml;
+        document.getElementById("blogCountText").textContent = listRes.data.tistory.item.totalCount;
+    } catch (err) {
+        console.log(err);
+    }
+    
+}
 /**
  * contact form reset 함수
  */

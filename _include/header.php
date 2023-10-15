@@ -34,9 +34,16 @@
                         </a>
                     </li>
 
-                    <li class="nav-menu" data-aos="fade-down" data-aos-delay="7300">
+                    <li class="nav-menu" data-aos="fade-down" data-aos-delay="7200">
                         <a href="javascript:void(0)" class="menu">
                             <span class="menu-num">03.</span>
+                            <span class="menu-name">BLOG</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-menu" data-aos="fade-down" data-aos-delay="7300">
+                        <a href="javascript:void(0)" class="menu">
+                            <span class="menu-num">04.</span>
                             <span class="menu-name">CONTACT</span>
                         </a>
                     </li>
