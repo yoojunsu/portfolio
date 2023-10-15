@@ -70,7 +70,9 @@
                     프로가 되고자 하는 웹 개발자. <br />
                     유준수 입니다.
                 </p>
-                <a href="" class="link-btn">Detail</a>
+                <a href="https://yoojunsu.notion.site/fcb8932608004e1ab6da9046a1856615?pvs=4" class="link-btn" target="_blank">
+                    MORE(Notion)
+                </a>
             </div>
             <!-- about 상단 컨텐츠 -->
         </div>

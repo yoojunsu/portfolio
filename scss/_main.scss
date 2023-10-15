@@ -201,6 +201,21 @@ main {
             line-height: 1.5;
             margin-top: 15px;
         }
+
+        .link-btn {
+            display: block;
+            border: 1px solid $text-main-color;
+            @include fontStyle($size: 1.6rem);
+            text-align: center;
+            max-width: 200px;
+            padding: 10px 0;
+            margin: 20px auto 0;
+            transition: transform 0.2s;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
     }
     // ...about 인사말 css
 
