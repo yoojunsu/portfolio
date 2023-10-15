@@ -479,7 +479,7 @@ let loadingAni = bodymovin.loadAnimation({
     animType: 'svg',
     loop: true,
     autoplay: false,
-    path: "../lottie/loading.json",
+    path: "./lottie/loading.json",
 });
 
 let loadingScreenShow = () => {
