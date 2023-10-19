@@ -160,7 +160,7 @@ let checkDivice = () => {
     //디바이스 체크 및 동작 대응
     let screenWidth = window.innerWidth;
     
-    if(screenWidth < 500) {
+    if(screenWidth <= 550) {
         NAV.style.display = "none";
         NAV.classList.remove("active");
         NAV_OPEN_BTN.classList.remove("active");

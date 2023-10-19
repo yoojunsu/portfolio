@@ -1540,7 +1540,7 @@ main #particleContent {
   }
 }
 /** ...main animation keyframes **/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .nav-wrap .nav-open-btn-wrap {
     display: block;
   }
@@ -1655,7 +1655,7 @@ main #particleContent {
     height: 400px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   html {
     font-size: 56%;
   }
