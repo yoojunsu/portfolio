@@ -266,8 +266,8 @@ let projectData = [
         name: "한국프리미엄브랜드 진흥원",
         descriptions: {
             0: "행사 주최 & 마케팅 대행사 업체 사이트",
-            1: "Vue.js 기반 사이트로 리뉴얼 & 관리자페이지 구현",
-            2: "퍼블리싱 100%",
+            1: "Vue.js 리뉴얼 & 관리자페이지 구현 (진행중)",
+            2: "프론트 100%",
             3: "PHP(Laravel)",
             4: "적응형 웹",
             5: "HTML, CSS, SCSS, Bootstrap, JAVASCRIPT, Vue.js",
@@ -291,7 +291,7 @@ let projectData = [
         descriptions: {
             0: "엑소바이옴코리아 소속 건강식품 쇼핑몰",
             1: "관리자페이지 구현 & 본페이지 운영",
-            2: "퍼블리싱 100%",
+            2: "퍼블리싱 100%, 프론트 100%",
             3: "PHP(Laravel)",
             4: "적응형 웹",
             5: "HTML, CSS, Bootstrap, JAVASCRIPT, Vue.js",
@@ -335,19 +335,7 @@ let projectData = [
         url: "https://yoojunsu.notion.site/51bc1070ccef4c1f908ac6bebf4eaff4?pvs=4",
     },
     {
-        name: "퍼플스-트리니티 멤버 신규페이지",
-        descriptions: {
-            0: "특별회원 프로그램 소개 페이지",
-            1: "신규페이지 구현",
-            2: "퍼블리싱 100%",
-            3: "ASP",
-            4: "적응형 웹",
-            5: "HTML, CSS, SCSS, JAVASCRIPT(Jquery)",
-        },
-        url: "http://www.purples.co.kr/sub/sub4/sub4_14.asp"
-    },
-    {
-        name: "퍼플스-매니저 채용 신규페이지",
+        name: "퍼플스-매니저 채용",
         descriptions: {
             0: "신규 커플매니저 채용 페이지",
             1: "신규페이지 구현",
@@ -359,22 +347,22 @@ let projectData = [
         url: "http://www.purples.co.kr/sub/recruit.asp"
     },
     {
-        name: "퍼플스-TV CF 소개페이지",
+        name: "퍼플스-트리니티 멤버 모집",
         descriptions: {
-            0: "TV CF 제작기념 소개페이지",
+            0: "신규 등급 모집 페이지",
             1: "신규페이지 구현",
             2: "퍼블리싱 100%",
             3: "ASP",
             4: "적응형 웹",
             5: "HTML, CSS, SCSS, JAVASCRIPT(Jquery)",
         },
-        url: "http://www.purples.co.kr/sub/sub1/sub1_24.asp"
+        url: "https://www.purples.co.kr/sub/sub4/sub4_14.asp"
     },
     {
         name: "디노블",
         descriptions: {
             0: "결혼정보회사 사이트",
-            1: "기존 사이트 유지보수 운영",
+            1: "메인 부분 리뉴얼 & 유지보수 운영",
             2: "퍼블리싱 100%",
             3: "ASP",
             4: "모바일 웹",
@@ -387,6 +375,18 @@ let projectData = [
         descriptions: {
             0: "결혼정보회사 사이트",
             1: "기존 사이트 유지보수 운영",
+            2: "퍼블리싱 100%",
+            3: "ASP",
+            4: "모바일 웹",
+            5: "HTML, CSS, SCSS, JAVASCRIPT(Jquery)",
+        },
+        url: "http://www.lemarry.co.kr/"
+    },
+    {
+        name: "퍼플스",
+        descriptions: {
+            0: "결혼정보회사 사이트",
+            1: "신규페이지 제작",
             2: "퍼블리싱 100%",
             3: "ASP",
             4: "모바일 웹",
