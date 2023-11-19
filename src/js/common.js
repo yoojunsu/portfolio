@@ -70,8 +70,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const SKILLS_DETAIL = [
         {
             "name": `HTML5`,
-            "description": `HTML5의 시맨틱 요소를 활용하여 웹 페이지의 구조를 더 명확하게 표현 하는 것을 지향하며, 언제나 접근성 및 검색엔진최적화(SEO)를 고려하여 마크업을 합니다.
-            또한, css,Javascript와의 상호작용을 고려하여 class명과 id명을 적절하게 사용합니다.`
+            "description": `HTML5의 시맨틱 요소를 활용하여 웹 페이지의 구조를 더 명확하게 표현 하는 것을 지향하며 언제나 웹 표준, 웹 접근성, 검색엔진최적화(SEO)를 고려하여 마크업을 합니다.
+            또한, css,Javascript와의 상호작용 및 백엔드 개발자와의 협업을 고려하여 class명과 id명을 적절하게 사용합니다.`
         },
         {
             "name": `CSS3`,
@@ -99,7 +99,7 @@ window.addEventListener("DOMContentLoaded", () => {
         {
             "name": `Git`,
             "description": `Git을 사용하여 협업하고, 버전 관리를 할 수 있습니다. 논의를 통해 Branch 전략과, 커밋 관리를 통해 효율적입 협업 및 형상관리를 할 수 있으며, 
-            대규모 프로젝트시에는 Git의 GUI도구인 소스트리(SourceTree)를 보다 간편하게 Git을 다루고, 필요시 Git의 필수 명령어를 이해하여 터미널 또한 적극 활용합니다.`
+            대규모 프로젝트시에는 Git의 GUI도구인 소스트리(SourceTree)를 적극 사용하여 보다 간편하게 Git을 다루고, 필요시에는 Git의 필수 명령어를 이해하여 터미널 또한 적극 활용합니다.`
         }
 
     ];
