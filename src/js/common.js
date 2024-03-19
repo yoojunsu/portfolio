@@ -455,8 +455,6 @@ let loadMoreProject = () => {
         `
         //프로젝트 추가
         PROJECT_LIST.innerHTML += projectHTML;
-
-        console.log(projectHTML);
     });
 
     // project갯수 업데이트
@@ -574,22 +572,55 @@ let sendMessage = () => {
 
 
 /**
- * 티스토리 블로그 게시물 get & 셋팅
+ * 티스토리 블로그 게시물 get & 셋팅 (24.02월자 api서비스 종료로 임시 하드코딩 배열객체로 대체)
  */
-let token = "69c451451f1534208377e6f59804259e_cd72d6d4885791c064acfeb57143c82f";
+let blogPostArr = [
+    {
+        thumbnail: "https://i1.daumcdn.net/thumb/S160x108/?scode=mtistory2&fname=https://blog.kakaocdn.net/dn/vgfcp/btsAqZMIMdv/JgK4KZngEhabyyqy1CyfiK/img.png",
+        title: "[CSS] CSS변수를 정의 할 때 사용하는 전역 선택자 ':root'",
+        date: "2023.11.17",
+        postUrl: "https://joroki.tistory.com/73",
+    },
+    {
+        thumbnail: "https://i1.daumcdn.net/thumb/S160x108/?scode=mtistory2&fname=https://blog.kakaocdn.net/dn/wlTbU/btsArwC0p24/4s9PBCBYOzv4iUYSaRtd1k/img.png",
+        title: "[Git] add,commit,push 명령어를 사용하여 원격저장소에 작업 파일 업로드하기",
+        date: "2023.11.16",
+        postUrl: "https://joroki.tistory.com/72"
+    },
+    {
+        thumbnail: "https://i1.daumcdn.net/thumb/S160x108/?scode=mtistory2&fname=https://blog.kakaocdn.net/dn/LvvWc/btsAeE99u4t/LsXuv3kTu5RQ7sYkSXIPW0/img.png",
+        title: "[php] Xampp 로컬 개발 환경 구축",
+        date: "2023.11.14",
+        postUrl: "https://joroki.tistory.com/71"
+    },
+    {
+        thumbnail: "https://i1.daumcdn.net/thumb/S160x108/?scode=mtistory2&fname=https://blog.kakaocdn.net/dn/cZgIUd/btszLvEXiVb/LuUoaAdmLy8Q6EPeKFZvu0/img.png",
+        title: "[Vue.js] props로 받은 데이터를 자식 컴포넌트에서 값을 바꿀때 사용하는 커스텀 이벤트 문법 (emit)",
+        date: "2023.11.06",
+        postUrl: "https://joroki.tistory.com/70"
+    },
+    {
+        thumbnail: "https://i1.daumcdn.net/thumb/S160x108/?scode=mtistory2&fname=https://blog.kakaocdn.net/dn/7XEDF/btszxrWTq5j/VDWCl2juiNesvJaFz2Hmh1/img.png",
+        title: "[HTML5] 모바일 친화적인 달력 UI를 제공하는 input type='data'",
+        date: "2023.10.31",
+        postUrl: "https://joroki.tistory.com/68"
+    },
+    {
+        thumbnail: "https://i1.daumcdn.net/thumb/S160x108/?scode=mtistory2&fname=https://blog.kakaocdn.net/dn/tksm2/btssvusJdk4/jagjcXx1d6wGilgMmqfkN0/img.png",
+        title: "[비동기통신] 비동기 요청을 쉽고 간결하게 처리해주는 라이브러리 Axios",
+        date: "2023.08.29",
+        postUrl: "https://joroki.tistory.com/52"
+    }
+];
 let blogDataSet = async() => {
-    try {
-        const listRes = await axios.get(`https://www.tistory.com/apis/post/list?access_token=${token}&output=json&blogName=Joroki&page=1`);
-        const blogPostData = listRes.data.tistory.item.posts;
-        let blogPostHtml = '';
-        for(let i = 0; i < blogPostData.length; i++) {
-            let blogPost = blogPostData[i];
-
-            blogPostHtml += `
-                <li class="blog-content">
+    blogPostArr.forEach( (blogPost,index) => {
+        const BLOG_CONTENT_LIST = document.getElementById("blogContentList");
+        const blogPostHtml = `
+            <li class="blog-content">
+                <div class="blog-content-text-wrap">
                     <span class="post-num-wrap">
                         No.
-                        <strong class="post-number">${blogPost.id}</strong>
+                        <strong class="post-number">${index + 1}</strong>
                     </span>
                     <span class="content-date">${blogPost.date}</span>
                     <h4 class="content-title">${blogPost.title}</h4>
@@ -597,16 +628,15 @@ let blogDataSet = async() => {
                         <span>Go to Post</span>
                         <i class="xi-long-arrow-right"></i>
                     </a>
-                </li>
-            `
-        }
-
-        document.getElementById("blogContentList").innerHTML = blogPostHtml;
-        document.getElementById("blogCountText").textContent = listRes.data.tistory.item.totalCount;
-    } catch (err) {
-        console.log(err);
-    }
+                </div>
+                <div class="blog-content-thumb-wrap">
+                    <img src="${blogPost.thumbnail}" />
+                </div>
+            </li>
+        `
     
+        BLOG_CONTENT_LIST.insertAdjacentHTML('beforeend', blogPostHtml);
+    });
 }
 /**
  * contact form reset 함수

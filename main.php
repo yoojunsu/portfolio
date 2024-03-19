@@ -445,7 +445,7 @@
                     간단하게 정보 전달을 할 수 있도록 총 <strong id="blogCountText"></strong> 개의 포스트를 
                     T-story 블로그에 작성하며 운영하고있습니다.
                 </p>
-                <a href="https://joroki.tistory.com/" class="link-btn">
+                <a href="https://joroki.tistory.com/" class="link-btn" target="_blank">
                     <span>블로그 보러가기</span>
                 </a>
             </div>
