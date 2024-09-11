@@ -188,7 +188,7 @@
                                     </li>
                                     <li class="about-my-career">
                                         <span class="about-my-txt">
-                                            2021.02 ~ ing
+                                            2021.02 ~ 2024.07
                                         </span>
                                     </li>
                                     <li class="about-my-career">
@@ -262,6 +262,10 @@
                             <button type="button" class="about-my-skil-btn ">
                                 <i class="xi-git-symbol"></i>
                                 <b class="about-my-skil-name">Git</b>
+                            </button>
+                            <button type="button" class="about-my-skil-btn ">
+                                <i class="xi-photoshop"></i>
+                                <b class="about-my-skil-name">Photoshop</b>
                             </button>
                         </div>
 

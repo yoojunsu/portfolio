@@ -94,6 +94,11 @@ window.addEventListener("DOMContentLoaded", () => {
             "name": `Git`,
             "description": `Git을 사용하여 협업하고, 버전 관리를 할 수 있습니다. 논의를 통해 Branch 전략과, 커밋 관리를 통해 효율적입 협업 및 형상관리를 할 수 있으며, 
             대규모 프로젝트시에는 Git의 GUI도구인 소스트리(SourceTree)를 적극 사용하여 보다 간편하게 Git을 다루고, 필요시에는 Git의 필수 명령어를 이해하여 터미널 또한 적극 활용합니다.`
+        },
+        {
+            "name": `Photoshop`,
+            "description": `어도비 포토샵을 이용하여, 간단한 웹 디자인 작업을 할 수 있습니다. 또한 웹 퍼블리셔로서 디자이너의 업무를 이해하고,
+            원활한 커뮤니케이션을 진행 할 수 있습니다.`
         }
 
     ];
