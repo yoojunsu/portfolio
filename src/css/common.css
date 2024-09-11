@@ -699,11 +699,11 @@ main #particleContent {
   z-index: -1;
 }
 .about-section .about-my-icon i {
-  font-size: 3rem;
+  font-size: 4rem;
   width: 100%;
   height: 100%;
   background: linear-gradient(140deg, #0a192f 33%, #0e2a51 70%);
-  padding: 30px 15px;
+  padding: 25px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 20px;
@@ -737,6 +737,12 @@ main #particleContent {
   display: -ms-flexbox;
   display: flex;
   gap: 0 5px;
+}
+.about-section .about-my-profile .about-subject-wrap {
+  width: 20%;
+}
+.about-section .about-my-profile .about-subject-wrap-last {
+  width: 100%;
 }
 .about-section .about-my-profile i {
   font-size: 1.5rem;

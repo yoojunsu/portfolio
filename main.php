@@ -84,7 +84,7 @@
                 <div class="about-my" id="aboutProfile" data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".about-my-box">
                     <div class="about-my-top">
                         <div class="about-my-icon">
-                            <i class="fa-solid fa-address-card"></i>
+                            <i class="xi-profile-o"></i>
                         </div>
                         <h4 class="about-my-tit">
                             PROFILE
@@ -94,7 +94,7 @@
                         <ul class="about-my-profile-list">
                             <li class="about-my-profile">
                                 <div class="about-subject-wrap">
-                                    <i class="fa-regular fa-square-check"></i>
+                                    <i class="xi-check-square-o"></i>
                                     <span class="about-my-txt about-profile-subject">
                                         Name:
                                     </span>
@@ -105,7 +105,7 @@
                             </li>
                             <li class="about-my-profile">
                                 <div class="about-subject-wrap">
-                                    <i class="fa-regular fa-square-check"></i>
+                                    <i class="xi-check-square-o"></i>
                                     <span class="about-my-txt about-profile-subject">
                                         Call:
                                     </span>
@@ -116,7 +116,7 @@
                             </li>
                             <li class="about-my-profile">
                                 <div class="about-subject-wrap">
-                                    <i class="fa-regular fa-square-check"></i>
+                                    <i class="xi-check-square-o"></i>
                                     <span class="about-my-txt about-profile-subject">
                                         Add:
                                     </span>
@@ -127,7 +127,7 @@
                             </li>
                             <li class="about-my-profile">
                                 <div class="about-subject-wrap">
-                                    <i class="fa-regular fa-square-check"></i>
+                                    <i class="xi-check-square-o"></i>
                                     <span class="about-my-txt about-profile-subject">
                                         School:
                                     </span>
@@ -138,7 +138,7 @@
                             </li>
                             <li class="about-my-profile">
                                 <div class="about-subject-wrap">
-                                    <i class="fa-regular fa-square-check"></i>
+                                    <i class="xi-check-square-o"></i>
                                     <span class="about-my-txt about-profile-subject">
                                         Edu:
                                     </span>
@@ -149,8 +149,8 @@
                                 </span>
                             </li>
                             <li class="about-my-profile">
-                                <div class="about-subject-wrap">
-                                    <i class="fa-regular fa-square-check"></i>
+                                <div class="about-subject-wrap about-subject-wrap-last">
+                                    <i class="xi-check-square-o"></i>
                                     <span class="about-my-txt">
                                         단순히 열심히 하는 <strong>'직원'</strong>이 아닌,
                                         이름을 걸고 의미있는 결과를 만들어내는 <strong>'프로'</strong>가 되고자합니다.
@@ -167,7 +167,7 @@
                 <div class="about-my" id="aboutCareer" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".about-my-box">
                     <div class="about-my-top">
                         <div class="about-my-icon">
-                            <i class="fa-solid fa-building"></i>
+                            <i class="xi-globus"></i>
                         </div>
                         <h4 class="about-my-tit">
                             CAREER
@@ -220,6 +220,7 @@
                                         <span class="about-my-txt">
                                             카페24 기반 쇼핑몰 템플릿 퍼블리싱<br /> 
                                             기존 클라이언트 유지보수 <br />
+                                            웹 템플릿을 위한 디자인 <br />
                                             클라이언트 컨택 및 응대
                                         </span>
                                     </li>
@@ -234,7 +235,7 @@
                 <div class="about-my" id="aboutSkils" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".about-my-box">
                     <div class="about-my-top">
                         <div class="about-my-icon">
-                            <i class="fa-solid fa-file-code"></i>
+                            <i class="xi-wrench"></i>
                         </div>
                         <h4 class="about-my-tit">
                             SKILLS
@@ -243,27 +244,23 @@
                     <div class="about-my-content">
                         <div class="about-my-skil-wrap">
                             <button type="button" class="about-my-skil-btn  active">
-                                <i class="fa-brands fa-html5"></i>
+                                <i class="xi-html5"></i>
                                 <b class="about-my-skil-name">HTML5</b>
                             </button>
                             <button type="button" class="about-my-skil-btn ">
-                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="xi-css3"></i>
                                 <b class="about-my-skil-name">Css3</b>
                             </button>
                             <button type="button" class="about-my-skil-btn ">
-                                <i class="fa-brands fa-square-js"></i>
+                                <i class="xi-javascript"></i>
                                 <b class="about-my-skil-name">JavaScript</b>
                             </button>
                             <button type="button" class="about-my-skil-btn ">
-                                <i class="fa-brands fa-vuejs"></i>
-                                <b class="about-my-skil-name">Vue.js</b>
-                            </button>
-                            <button type="button" class="about-my-skil-btn ">
-                                <i class="fa-brands fa-sass"></i>
+                                <i class="xi-css3"></i>
                                 <b class="about-my-skil-name">Scss</b>
                             </button>
                             <button type="button" class="about-my-skil-btn ">
-                                <i class="fa-brands fa-git-alt"></i>
+                                <i class="xi-git-symbol"></i>
                                 <b class="about-my-skil-name">Git</b>
                             </button>
                         </div>
@@ -522,24 +519,31 @@
 
         <div class="contact-social-box">
             <div class="contact-social-wrap">
-                <a href="https://github.com/yoojunsu" class="social" id="socialGit" target="_blank" data-aos="fade-up" data-aos-delay="100">
+                <a href="https://github.com/yoojunsu" class="social" id="socialGit" target="_blank" data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".contact-content-container">
                     <i class="xi-github"></i>
                     <p class="social-name">
                         GitHub
                     </p>
                 </a>
 
-                <a href="https://joroki.tistory.com/" class="social" id="socialTstory" target="_blank" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://joroki.tistory.com/" class="social" id="socialTstory" target="_blank" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".contact-content-container">
                     <i class="xi-blogger"></i>
                     <p class="social-name">
                         T-Story
                     </p>
                 </a>
 
-                <a href="https://yoojunsu.notion.site/fcb8932608004e1ab6da9046a1856615" class="social" id="socialInsta" target="_blank" data-aos="fade-up" data-aos-delay="300">
+                <a href="https://yoojunsu.notion.site/fcb8932608004e1ab6da9046a1856615" class="social" id="socialInsta" target="_blank" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".contact-content-container">
                     <i class="xi-paper-o"></i>
                     <p class="social-name">
                         Notion
+                    </p>
+                </a>
+
+                <a href="https://www.instagram.com/closet._.js?igsh=MWFrcHB4cnE3Mzh0aw%3D%3D" class="social" id="socialInsta" target="_blank" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".contact-content-container">
+                    <i class="xi-instagram"></i>
+                    <p class="social-name">
+                        Instagram
                     </p>
                 </a>
             </div>

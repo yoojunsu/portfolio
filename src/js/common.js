@@ -85,12 +85,6 @@ window.addEventListener("DOMContentLoaded", () => {
             또한, 작업 생산률을 높여주는 플러그인을 활용 및 커스터마이징 할 수 있습니다.`,
         },
         {
-            "name": `Vue.js`,
-            "description": `Vue.js를 활용하여 재사용이 가능한 컴포넌트 기반의 웹 애플리케이션을 구축 할 수 있습니다.
-            Vue기본문법을 이해하며, Vuex,Vue Router를 활용하여 State관리와 라우팅을 구현 합니다. Vue Cli와, 현대적인 SPA개발 방식을 선호하여, webpack설정에 대한 고민을 최소화 합니다.
-            `
-        },
-        {
             "name": `SCSS`,
             "description": `CSS전처리기인 SCSS를 활용하여 스타일 관리를 개선하고 변수와 mixin을 적극 활용하여 
             작업 생산률을 높이는 것을 지향합니다. 기본문법 및 기초적인 Scss 내장함수를 이해하고있어, 필요시 적극적으로 사용합니다.
