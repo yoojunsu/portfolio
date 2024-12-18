@@ -35,6 +35,11 @@
     </div>
     <!----- ...modal ------>
 
+    <!----- design pop ----->
+    <?php @include "./_include/design-layer.php" ?>
+    <!----- ...design pop ----->
+
+
     <!----- loading ------>
     <?php @include "./_include/loading.php" ?>
     <!----- ...loading ------>

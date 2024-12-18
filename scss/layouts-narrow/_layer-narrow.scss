@@ -1,0 +1,20 @@
+@media screen and (max-width: 1025px){
+    .design-layer-content-box{
+        @include display(
+            $areas: ".",
+            $rows: 1fr auto,
+            $gap: 0,
+        );
+    }
+
+    .work-section .work-btn-wrap .work-btn {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} 
+
+@media screen and (max-width: 421px) {
+    .design-layer-content-title {
+        @include fontStyle($size: 3rem);
+    }
+}
