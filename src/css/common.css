@@ -317,7 +317,11 @@ header {
   max-width: 1270px;
   margin: 0 auto;
 }
-.header-inner .logo {
+.header-inner .title-wrap .title {
+  position: absolute;
+  text-indent: -9999px;
+}
+.header-inner .title-wrap .logo {
   font-size: 1.7rem;
   font-family: "Yellowtail";
 }

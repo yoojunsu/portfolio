@@ -1,7 +1,8 @@
 <div class="header-inner">
-    <h1 class="logo">
-        YJS
-    </h1>
+    <div class="title-wrap">
+        <h1 class="title">유준수 포트폴리오</h1>
+        <span class="logo">YJS</span>
+    </div>
 
     <div class="nav-wrap">
         <div class="nav-open-btn-wrap">

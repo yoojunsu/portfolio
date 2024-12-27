@@ -3,7 +3,7 @@
     <div class="visual-content">
         <div id="visualAniWrap"></div>
         <div class="visual-content-txt-box">
-            <h1 class="pofol-tit" id="typing"> </h1>
+            <h2 class="pofol-tit" id="typing"> </h2>
             <div class="pofol-keyword-wrap">
                 <span class="pofol-keyword">
                     By. Yoo Jun Su
